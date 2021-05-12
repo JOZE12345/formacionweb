@@ -1,0 +1,133 @@
+* {
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { 
+  min-height: 100vh;
+  
+  background-color : #fff;
+}
+
+.titulo {
+  font-size: 40px;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.subtitulo {
+  margin: 0;
+  color: #000;
+  display: inline;
+  font-size: 50px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.sabor { 
+  color: #fff;
+  margin: 7px 0;
+  font-size: 50px;
+  font-weight: 600;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.7);
+  font-family: 'Dancing Script', cursive;
+  margin-top: 0;
+}
+
+.linea-division {
+  width: 80%;
+  height: 2px;
+  background-color: #36221c;
+}
+/*termina carrucel del primer bars*/
+.sticky-top-2 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 74px;
+  z-index: 1020;
+}
+
+
+
+
+
+/*titulo venta*/
+#textotitulo
+{
+  font-size: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+/*barra bactground*/
+.colorbarra
+{
+  background-color: darkgrey;
+  font-family: 'Cormorant Garamond', serif;
+  
+
+
+}
+/*EFECTO IMAGEN */
+
+
+#container {
+width: 300px;
+
+margin: 0 auto;
+}
+.ex2 img{
+height: 100px;
+width: 300px;
+margin: 15px 0;
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-ms-transition: all 1s ease;
+transition: all 1s ease;
+}
+.ex2 img:hover {
+height: 133px;
+width: 400px;
+margin-left: -50px;
+}
+/*imagen efecto*/
+
+.imagen:hover {filter: opacity(.5);}
+/*soluciones*/
+
+
+/*centrar form*/
+@import url('https://fonts.googleapis.com/css2?family=Trocchi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+.fuente1
+{
+font-family: 'Josefin Sans', sans-serif;
+}
+.fuente2
+{
+font-family: 'Teko', sans-serif;
+}
+#fuente3
+{
+
+font-family: 'Source Code Pro', monospace;
+
+
+
+}
+#fuente4
+{
+font-family: 'Roboto Slab', serif;
+}
+#fuente5
+{
+
+font-family: 'Source Code Pro', monospace;
+color: rgb(97, 148, 47);
+
+
+}
