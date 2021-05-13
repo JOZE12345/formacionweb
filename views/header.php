@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/nivo-slider_2.css">
     <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/mi-slider_2.css">
     <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/estilos2.css">
+    <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
     <!--aqui se encuentra el footer diseño de fondo-->
     <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/Footer1style.css">
