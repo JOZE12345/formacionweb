@@ -42,7 +42,7 @@ class Ruteador
 			// El siguiente key se crea cuando se inicia sesión
 		
 			$_SESSION["timeout"] = time();
-
+			//s
 	
 		//Recoger la variable URL enviado por GET
 		//y darle FORMATO
