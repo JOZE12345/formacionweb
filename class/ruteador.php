@@ -64,14 +64,11 @@ class Ruteador
         }else{*/
 			//se pone como variable principal segun la validacion del login
 
-		if(isset($_SESSION['r'])){
-			if($_SESSION['r']!=''){
+	if(isset($_SESSION['r'])){
+		if($_SESSION['r']!=''){
 			if(isset($_GET["url"])){
 				if($_GET["url"]=="login"){
 					$gt = "main";
-				}else if($_GET["url"]=="loginfull"){
-					$gt = "main";
-	
 				}else {
 					$gt = $_GET["url"] ;
 				}
@@ -102,9 +99,7 @@ class Ruteador
 
 				
 				if($_GET["url"]!="login"){
-					if($_GET["url"]=="loginfull"){
-						$gt = "loginfull";
-					}else if($_GET["url"]=="login/ValidarIngreso"){
+				 if($_GET["url"]=="login/ValidarIngreso"){
 						//header("Location:".  constant('URL')  ."login");login/ValidarIngreso
 						$gt = $_GET["url"] ;
 						//$gt = "login";

@@ -3,7 +3,7 @@
 
 //URL ABSOLUTA (ESTATICA)
 //define("URL", "https://plusvisionperu.com/");
-define("URL", "http://localhost/WebPV/");
+define("URL", "http://localhost/Formacion/formacionweb/");
 
 //DEFINIR LOS PARAMETROS DE LA BASE DE DATOS
 define("SERVIDOR","127.0.0.1");
