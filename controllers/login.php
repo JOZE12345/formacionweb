@@ -25,8 +25,8 @@ class login
 
 	
 
-		$this->modelo = new stock_model();
-		$this->modelo->readerpara();
+		//$this->modelo = new stock_model(); descomentar para que funcione bd 
+		//$this->modelo->readerpara();
 
 	
 		//$this->consulta = $this->modelo->get();

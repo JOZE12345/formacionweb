@@ -162,7 +162,7 @@ class Ruteador
 							//Colocar la variable entre llaves
 							//para considerar el valor como variable
 			}else{
-
+				//echo $controlador;
 				$controlador->mostrarVista();
 			}
 			
