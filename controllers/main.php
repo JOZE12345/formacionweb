@@ -18,9 +18,9 @@ class main
 		//Codigo para mostrar la Vista
 		//Generar el nombre de la vista: views/consulta/index.php
 		$fileName = "views/" . $nombre . ".php";
-		$this->modelo = new stock_model();
+	//	$this->modelo = new stock_model();
 		
-
+/*
 		$estado = $this->modelo->validarestado($_SESSION['use']) ;                    
 		$recuperarestado = $estado[0];  
 		if(!is_null($recuperarestado["_estadousuario"])){
@@ -66,7 +66,7 @@ class main
 	
 		$this->consulta = $this->modelo->get();
 			
-		
+		*/
 	
 		//Incluir el archivo (codigo) de la vista
 		require_once("$fileName");

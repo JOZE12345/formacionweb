@@ -96,9 +96,9 @@ class Ruteador
 
 			if(isset($_GET["url"])){
 				
-
+				$gt = $_GET["url"] ;
 				
-				if($_GET["url"]!="login"){
+				/*if($_GET["url"]!="login"){
 				 if($_GET["url"]=="login/ValidarIngreso"){
 						//header("Location:".  constant('URL')  ."login");login/ValidarIngreso
 						$gt = $_GET["url"] ;
@@ -108,10 +108,10 @@ class Ruteador
 					}
 				}else{
 					$gt = "login";
-				}
+				}*/
 				
 			}else{
-				$gt = "login";
+				$gt = "main";
 			}
 		}
 			

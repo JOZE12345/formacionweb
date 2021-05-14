@@ -2,7 +2,7 @@
 //CONTIENE CONSTANTES PHP
 
 //URL ABSOLUTA (ESTATICA)
-//define("URL", "https://plusvisionperu.com/");
+
 define("URL", "http://localhost/Formacion/formacionweb/");
 
 //DEFINIR LOS PARAMETROS DE LA BASE DE DATOS
