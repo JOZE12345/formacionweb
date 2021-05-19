@@ -49,9 +49,9 @@
 <br>
 <br>
 <div class="card-deck ">
-  <div class="card  bg-white text-dark border-0  "  >
+  <div class="card  bg-white text-dark border-0  " >
     
-    <img class="card-img-top imagen " src="public/img/car1_1.png" alt="Card image cap">
+    <img class="card-img-top imagen " src="public/img/car1_1.png" alt="Card image cap"  id="zoomIn">
     
     <div class="card-body ">
       <h5 class="card-title  text-uppercase  font-weight-bold text-center">Calidad</h5>

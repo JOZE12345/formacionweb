@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/login2.css">
     <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/footer.css">
     <link rel="shortcut icon" href="<?php echo constant('URL') ?>public/img/pvsac1.ico">
-    
+    <link rel="shortcut icon" href="<?php echo constant('URL') ?>public/img/hover.css">
     <link rel="shortcut icon" href="<?php echo constant('URL') ?>public/img/navbar2.ico">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -20,8 +20,9 @@
       
         <title>RESTAURANTE </title>
   </head>
+  
   <body >
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
   <a class="navbar-brand" href="#"><img width="150" height="50"  src="public/img/senati.png"/></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
