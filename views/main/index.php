@@ -30,13 +30,43 @@
 <br>
 <div><div><h1 class="h2 text-center">SENATI RESTAURANT</h1></div>
 <div><blockquote class="blockquote text-center">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+  <p class="mb-0">Bienvenido a la mejor plataforma web de servicios gastronomicos, con noostros lograras encontrar el restaurante de tus sueños.</p>
+  <footer class="blockquote-footer">Yair Guevara<cite title="Source Title"> C.E.O</cite></footer>
 </blockquote></div>
 
 </div>
 <br>
 <br>
+<div class="card-deck ">
+  <div class="card  bg-white text-dark border-0  "  >
+    
+    <img class="card-img-top imagen " src="public/img/car1_1.png" alt="Card image cap">
+    
+    <div class="card-body ">
+      <h5 class="card-title  text-uppercase  font-weight-bold text-center">Calidad</h5>
+      <p class="card-text"  id="fuente4"></p>
+    </div>
+    
+   
+  </div>
+  <div class="card bg-white text-dark border-0 ">
+    <img class="card-img-top imagen" src="public/img/car2.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title  text-uppercase  font-weight-bold text-center">Ergonomia</h5>
+      <p class="card-text"  id="fuente4"></p>
+    </div>
+    
+  </div>
+  <div class="card bg-white text-dark border-0 ">
+    <img class="card-img-top imagen" src="public/img/car3.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title text-uppercase   font-weight-bold text-center">Confianza</h5>
+      <p class="card-text"  id="fuente4">
+      </p>
+    </div>
+   
+  </div>
+</div>
 <?php
 	require_once("views/footer.php");
 
