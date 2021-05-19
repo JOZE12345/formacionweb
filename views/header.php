@@ -10,8 +10,9 @@
 
     <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/login2.css">
     <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/footer.css">
+    <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/hover.css">
     <link rel="shortcut icon" href="<?php echo constant('URL') ?>public/img/pvsac1.ico">
-    <link rel="shortcut icon" href="<?php echo constant('URL') ?>public/img/hover.css">
+ 
     <link rel="shortcut icon" href="<?php echo constant('URL') ?>public/img/navbar2.ico">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -31,10 +32,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="main">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo constant('URL') ?>main">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Primero</a>
+        <a class="nav-link" href="<?php echo constant('URL') ?>ubicaciones ">Ubicaciones</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

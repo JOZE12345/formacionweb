@@ -33,7 +33,6 @@
 <br>
 
 <hr class="hr-or">
-        <span class="span-or">or</span>
 <hr class="hr-or">
 <hr class="hr-or">
 <footer class="nb-footer">
