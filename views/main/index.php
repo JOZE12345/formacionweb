@@ -30,11 +30,22 @@
 <br>
 <div><div><h1 class="h2 text-center">SENATI RESTAURANT</h1></div>
 <div><blockquote class="blockquote text-center">
-  <p class="mb-0">Bienvenido a la mejor plataforma web de servicios gastronomicos, con noostros lograras encontrar el restaurante de tus sueños.</p>
+  <p class="mb-0">Bienvenido a la mejor plataforma web de servicios gastronomicos, con nosotros lograras encontrar el restaurante de tus sueños.</p>
   <footer class="blockquote-footer">Yair Guevara<cite title="Source Title"> C.E.O</cite></footer>
 </blockquote></div>
 
 </div>
+<br>
+<br>
+<div class="d-flex justify-content-center">
+<img src="public/img/baner1.jpg" class="img-fluid" alt="Responsive image">
+</div>
+<br>
+<div><blockquote class="blockquote text-center">
+  <p class="mb-0 h2 ">Cumplimos con todos los protocolos de bioseguridad para cuidate a ti y a tu familia</p>
+  <footer class="blockquote-footer">Yair Guevara<cite title="Source Title"> C.E.O</cite></footer>
+</blockquote></div>
+<br>
 <br>
 <br>
 <div class="card-deck ">
@@ -67,6 +78,10 @@
    
   </div>
 </div>
+
+
+
+
 <?php
 	require_once("views/footer.php");
 
