@@ -92,7 +92,7 @@
 
         public function regitrarse($p_nombre,$p_apellido,$p_dni,$p_telefono,$p_direccion,$p_usuario,$p_contraseña,$p_cod_RolUsuario)
         {
-            clase_conexion::cargarajax();
+            clase_conexion::cargar();
             $this->_bd = clase_conexion::conectar();
 
             $cadenasql = "CALL registrarUsuario('".$p_nombre."','".$p_apellido."','".$p_dni."','".$p_telefono."','".$p_direccion."','".$p_usuario."','".$p_contraseña."',".$p_cod_RolUsuario.")";

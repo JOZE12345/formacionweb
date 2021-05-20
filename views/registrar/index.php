@@ -63,8 +63,8 @@ if(isset($_GET["v"])){
                            </div>
 
                            <div class="col-md-12">
-                                <select class="form-select mt-3" required>
-                                      <option selected disabled name="p_cod_RolUsuario" value="">Nivel</option>
+                                <select class="form-select mt-3" required name="p_cod_RolUsuario">
+                                      <option selected disabled  value="">Nivel</option>
                                       <option value="1">Administrador</option>
                                       <option value="2">Cliente</option>
                                      

@@ -23,6 +23,7 @@ class registrar extends Controlador
 	}
     function registrarusuario(){
         $objmodel = new stock_model();
+        echo  $_POST["p_nombre"];
         $p_nombre = $_POST["p_nombre"] ;
         $p_apellido = $_POST["p_apellido"] ;
         $p_dni = $_POST["p_dni"] ; 
@@ -44,7 +45,7 @@ class registrar extends Controlador
 
         }else{
 
-            header("Location:".  constant('URL')."registrar?v=GHRTADFADWFASDFDFADFEFCVEFA23XFAF");
+           header("Location:".  constant('URL')."registrar?v=GHRTADFADWFASDFDFADFEFCVEFA23XFAF");
         }
 
 
