@@ -70,19 +70,19 @@ class login
                                 
                                 $_SESSION['r'] = "main";
                                 $_SESSION['use'] = $_POST["usuario"];
-                               // header("Location:".  constant('URL'));
+                                header("Location:".  constant('URL'));
                              
                            
                    ///
                
               
                 }else{
-                    //header("Location:".  constant('URL')  ."login?v=GHRTADFADWFASDFDFADFEFCVEFA23XFAF");
+                    header("Location:".  constant('URL')  ."login?v=GHRTADFADWFASDFDFADFEFCVEFA23XFAF");
     
                 }
                 
             }else{
-            //    header("Location:".  constant('URL')  ."login?v=GHRTADFADWFASDFDFADFEFCVEFA23XFAF");
+                header("Location:".  constant('URL')  ."login?v=GHRTADFADWFASDFDFADFEFCVEFA23XFAF");
 
             }
         
