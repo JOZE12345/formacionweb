@@ -2,13 +2,16 @@
 	require_once("views/header.php");
 
 ?>
+<div class="img-fluid" style="max-width:100%; height: auto; background-image: url('public/img/registro.jpg'); background-repeat: no-repeat;
+background-position: center; background-size: cover; background-attachment: fixed;">
+
 <div class="form-body">
 <div class="d-flex justify-content-center h-100">
         <div class="row">
             <div class="form-holder">
                 <div class="form-content">
                     <div class="form-items">
-                        <h3>Register Today</h3>
+                        <h3>Registro Restaurant</h3>
                         <p>Fill in the data below.</p>
                         <form class="requires-validation" novalidate>
 
