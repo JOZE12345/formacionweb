@@ -3,7 +3,7 @@
 
 //URL ABSOLUTA (ESTATICA)
 
-define("URL", "http://localhost/formacion/formacionweb/");
+define("URL", "http://localhost/formacion/");
 
 //DEFINIR LOS PARAMETROS DE LA BASE DE DATOS
 define("SERVIDOR","127.0.0.1");
