@@ -21,6 +21,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="<?php echo constant('URL') ?>public/js/registro.js"></script>
 
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZfAM8VJ5UGRSnnqwxNPP9NKfQKafJIU&callback=initMap">
+    </script>
         <title>RESTAURANTE </title>
   </head>
   
