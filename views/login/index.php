@@ -85,7 +85,7 @@ if(isset($_GET["v"])){
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					No estas registrado?<a href="#">Crear cuenta nueva</a>
+					No estas registrado?<a href="registrar">Crear cuenta nueva</a>
 				</div>
 				<div class="d-flex justify-content-center">
 					<a href="#">Olvidaste tu contraseña?</a>

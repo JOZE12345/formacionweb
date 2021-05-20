@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/login2.css">
     <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/footer.css">
     <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/hover.css">
-    <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/registro.css">
+    <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/regis.css">
     <link rel="shortcut icon" href="<?php echo constant('URL') ?>public/img/pvsac1.ico">
  
     <link rel="shortcut icon" href="<?php echo constant('URL') ?>public/img/navbar2.ico">

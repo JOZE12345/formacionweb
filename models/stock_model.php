@@ -90,12 +90,12 @@
 
         }
 
-        public function insertar_ism_ofi_audito($idinvental,$idproduct,$falta,$sobra)
+        public function regitrarse($p_nombre,$p_apellido,$p_dni,$p_telefono,$p_direccion,$p_usuario,$p_contraseña,$p_cod_RolUsuario)
         {
             clase_conexion::cargarajax();
             $this->_bd = clase_conexion::conectar();
 
-            $cadenasql = "select * from proc_update_stockxalmacen_periodo_all_fal_sobra(".$idinvental.",".$idproduct.",".$falta.",".$sobra.")";
+            $cadenasql = "CALL registrarUsuario('".$p_nombre."','".$p_apellido."','".$p_dni."','".$p_telefono."','".$p_direccion."','".$p_usuario."','".$p_contraseña."',".$p_cod_RolUsuario.")";
             $insertar = $this->_bd->prepare($cadenasql);
 
             $insertar->execute();

@@ -65,7 +65,7 @@ class login
           
                 //mejor esto igual al validar el estado 
                 if(!is_null($recuperarnombre["nombre"])){                   
-                   echo $recuperarnombre["nombre"] ;
+                  // echo $recuperarnombre["nombre"] ;
                                 
                                 
                                 $_SESSION['r'] = "main";
