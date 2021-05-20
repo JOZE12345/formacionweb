@@ -14,10 +14,7 @@ background-position: center; background-size: cover; background-attachment: fixe
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
+
 
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
