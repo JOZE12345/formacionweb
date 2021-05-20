@@ -3,7 +3,26 @@
 	require_once("views/header.php");
 
 ?>
+<script>
+function deletec(){
+  
+  document.cookie = "empresasenati=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
 
+}
+function cambiarempresa(empresa){
+
+  
+
+if(empresa!=''){
+deletec();
+var d = new Date();
+ d.setTime(d.getTime()+1 * 24 * 60 * 60 * 1000);
+ document.cookie = "empresasenati="+empresa+";expires="+d.toUTCString()+";";
+ //cambiarpara('ALMACEN PRINCIPAL VENTAS',202010);
+
+}
+}
+</script>
 <div class="img-fluid" style="max-width:100%; height: auto; background-image: url('public/img/login.jpg'); background-repeat: no-repeat;
 background-position: center; background-size: cover; background-attachment: fixed;">
 <br>
@@ -22,6 +41,19 @@ background-position: center; background-size: cover; background-attachment: fixe
 		<div class="card">		
 			<div class="card-header">
 				<h3>Iniciar Sesion</h3>
+				<?php
+
+if(isset($_GET["v"])){
+
+  if($_GET["v"]=="GHRTADFADWFASDFDFADFEFCVEFA23XFAF"){
+	echo "<h4 class='display-14 text-danger text-center' >VUELVA A INGRESAR </h4>" ;
+  }else if($_GET["v"]=="jasdfkldfuenadflsadfujqnfsf"){
+	echo "<h4 class='display-14 text-danger text-center' >USUARIO NO EXISTE</h4>" ;
+
+  }
+}
+
+?>
 				<div class="d-flex justify-content-end social_icon">
 					<span><i class="fab fa-facebook-square"></i></span>
 					<span><i class="fab fa-google-plus-square"></i></span>
@@ -29,25 +61,25 @@ background-position: center; background-size: cover; background-attachment: fixe
 				</div>
 			</div>
 			<div class="card-body">
-				<form>
+				<form action="login/ValidarIngreso" method="post">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="username">
+						<input type="text" class="form-control" placeholder="username" name="usuario">
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" placeholder="password">
+						<input type="password" class="form-control" placeholder="password" name="passw">
 					</div>
 					<div class="row align-items-center remember">
 						<input type="checkbox">Recordar contraseña
 					</div>
 					<div class="form-group">
-						<input type="submit" value="Login" class="btn float-right login_btn">
+						<input onclick="cambiarempresa('senati')" type="submit" value="Login" class="btn float-right login_btn">
 					</div>
 				</form>
 			</div>

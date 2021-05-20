@@ -65,10 +65,12 @@ class Ruteador
 			//se pone como variable principal segun la validacion del login
 
 	if(isset($_SESSION['r'])){
+		
 		if($_SESSION['r']!=''){
 			if(isset($_GET["url"])){
 				if($_GET["url"]=="login"){
-					$gt = "main";
+				//	$gt = "main";
+					$gt = $_GET["url"] ;
 				}else {
 					$gt = $_GET["url"] ;
 				}

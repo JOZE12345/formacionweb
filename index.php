@@ -21,7 +21,8 @@
 
 	var_dump($tabla);
 	*/
-	
+	require_once("bd/clase_conexion.php");
+    require_once("models/stock_model.php");
 	
 	//Incluir el Controlador PADRE
 	//Sirve para poder acceder a los controladores y a la vez a los metodos de este , como la base de datos o que se visuallzia

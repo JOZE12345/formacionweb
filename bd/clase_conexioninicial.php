@@ -24,11 +24,9 @@ class clase_conexioninicial{
         require_once("controllers/code.php");
         $entidadcode = new EntidadCode();
         if(isset($_COOKIE['empresa'])){
-            if($_COOKIE['empresa']=="titosac"){
+            if($_COOKIE['empresa']=="senati"){
                // $entidadcode->bd_set("=");
             $entidadcode->bd_set("");
-            }else if($_COOKIE['empresa']=="foamgavich"){
-                $entidadcode->bd_set("");
             }
         }
        
@@ -56,11 +54,9 @@ class clase_conexioninicial{
         require_once("controllers/code.php");
         $entidadcode = new EntidadCode();
         if(isset($_COOKIE['empresa'])){
-            if($_COOKIE['empresa']=="titosac"){
+            if($_COOKIE['empresa']=="senati"){
               //  $entidadcode->bd_set("=");
             $entidadcode->bd_set("");
-            }else if($_COOKIE['empresa']=="foamgavich"){
-                $entidadcode->bd_set("");
             }
         } 
       
@@ -102,11 +98,9 @@ class clase_conexioninicial{
         require_once("../controllers/code.php");
         $entidadcode = new EntidadCode();
         if(isset($_COOKIE['empresa'])){
-            if($_COOKIE['empresa']=="titosac"){
+            if($_COOKIE['empresa']=="senati"){
              //  $entidadcode->bd_set("VFZSM04ySklhM2xpU0hkNFVVWjBibEZzY0RkS1JXZHNaVE5XWldGRlRtdEpNa1YzV1VWS1UwMURPVlZPUkVWc1Z6RlNPRXBxUVc5UldEQjVZa1pDY2xOdU1VOVNlazFzVlRCNFRtTXpiMnBQUkZGM1RsUmFlRkZZVmxwWmFXZHNWekk1Y0dKc01XUktibGw0VVZoT1MyTkllRWxRUjJOc1NUSjRWRmRUV2xOU1JUVnBWbTR3YUU1cVJTdFRXRWxzVmxVMWJGTkdNSHBaYXpsclVERlpNRlZwZUVaWFZWRnM=");
              $entidadcode->bd_set("");
-            }else if($_COOKIE['empresa']=="foamgavich"){
-                $entidadcode->bd_set("");
             }
         }         
         $entidadcode->servidor_set("");
@@ -138,7 +132,7 @@ class clase_conexioninicial{
                                     self::$_usuario,self::$_clave);
 */
 
-        self::$_conexion=new PDO("pgsql:host=".self::$_servidor.";"."dbname=".self::$_bd,
+        self::$_conexion=new PDO("mysql:host=".self::$_servidor.";"."dbname=".self::$_bd,
                                     self::$_usuario,self::$_clave);
             /* self::$_conexion= pg_connect("host=201.240.44.159 port=5432 dbname=db1020 user=user2021 password=@User2021@");*/
             ///---------------------

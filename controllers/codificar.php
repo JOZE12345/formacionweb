@@ -1,5 +1,5 @@
 <?php
-require_once("modelo/EntidadCode.php");
+require_once("models/EntidadCode.php");
 /*
 $entidadcode = new EntidadCode();
 $entidadcode->bd_set("db1020");

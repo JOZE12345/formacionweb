@@ -149,16 +149,19 @@
         public function validaringresocod($nrdoc,$pass)
         {
             //echo "estamos validando ";
-            clase_conexioninicial::cargar();
-            $this->_bd = clase_conexioninicial::conectar();
-            $cadenasql = "select * from proc_call_returnid_idusuario_nroDoc('".$nrdoc."','".$pass."');";
+            clase_conexion::cargar();
+            $this->_bd = clase_conexion::conectar();
+        //    echo var_dump(clase_conexion::conectar());
+            $cadenasql = "CALL proc_validarUsuario('".$nrdoc."','".$pass."');";
+            //echo "ga";
             $registros = $this->_bd->query($cadenasql);
             if($registros!=null){
-
+             //   echo "paso";
             $fila = $registros->fetchAll();
             clase_conexion::desconectar();
             return $fila ; 
             }else{
+               // echo " no paso";
                 clase_conexion::desconectar();
                 false;
             }

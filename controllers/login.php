@@ -44,68 +44,50 @@ class login
         $stock_model = new stock_model();
         $entidadcode = new EntidadCode();
         $cod = new codificar();
-      
+   //     echo "hola1";
         
     
         if((isset($_POST["usuario"])) && (isset($_POST["passw"]))){
              $entidadcode->usuario_set($_POST["usuario"]);
              $entidadcode->clave_set($_POST["passw"]);
             //session_start();
+           // echo "hola2";
             $entidadcode = $cod->inic($entidadcode,8);
+         //   echo "hola3";
             $_SESSION['user'] = $entidadcode->usuario_get();
             $_SESSION['pass'] = $entidadcode->clave_get();
-        
+         //   echo "hola4";
+            $estado = $stock_model->validaringresocod($_POST["usuario"],($_POST["passw"])) ;   
+          //  echo var_dump($estado);
             
-            if(clase_conexioninicial::validar()){
+            $recuperarnombre = $estado[0];
+           // echo var_dump($recuperarnombre);  
+          
                 //mejor esto igual al validar el estado 
-                if($stock_model->validaringresocod($_POST["usuario"],md5($_POST["passw"]))!=''){                   
-                    $estado = $stock_model->validarestado($_POST["usuario"]) ;                    
-                    $recuperarestado = $estado[0];  
-                    //
-                    if(!is_null($recuperarestado["_estadousuario"])){
-                        if($recuperarestado["_estadousuario"]=="ACTIVO"){
-                            $tienda = $stock_model->validartienda($_POST["usuario"]) ; 
-                            $recuperartienda = $tienda[0];
-                           // echo var_dump(is_null($recuperartienda["_descalmacen"]));
-                            if(is_null($recuperartienda["_descalmacen"]) == false ){
+                if(!is_null($recuperarnombre["nombre"])){                   
+                   echo $recuperarnombre["nombre"] ;
                                 
-                                if($recuperartienda["_descalmacen"]!="" ){
+                                
                                 $_SESSION['r'] = "main";
-                                $_SESSION['Tienda_sesion'] = $recuperartienda["_descalmacen"];
                                 $_SESSION['use'] = $_POST["usuario"];
-                                header("Location:".  constant('URL'));
-                                }else{
-                                    header("Location:".  constant('URL')  ."login?v=jasdfkldfuenadflsadfujqnfsf");
-            
-                                }
-                            }else{
-                               // echo "entro";
-                                header("Location:".  constant('URL')  ."login?v=jasdfkldfuenadflsadfujqnfsf");
-            
-                            }
-                        
-                        }else{
-                            header("Location:".  constant('URL')  ."login?v=jasdfkldfuenadflsadfujqnfsf");
-
-                        }
+                               // header("Location:".  constant('URL'));
+                             
+                           
                    ///
-                }else{
-                    header("Location:".  constant('URL')  ."login?v=jasdfkldfuenadflsadfujqnfsf");
-
-                }
+               
               
                 }else{
-                    header("Location:".  constant('URL')  ."login?v=GHRTADFADWFASDFDFADFEFCVEFA23XFAF");
+                    //header("Location:".  constant('URL')  ."login?v=GHRTADFADWFASDFDFADFEFCVEFA23XFAF");
     
                 }
                 
             }else{
-                header("Location:".  constant('URL')  ."login?v=GHRTADFADWFASDFDFADFEFCVEFA23XFAF");
-            
+            //    header("Location:".  constant('URL')  ."login?v=GHRTADFADWFASDFDFADFEFCVEFA23XFAF");
+
             }
-        }
+        
     
-        }
+    }
 	
 
 }

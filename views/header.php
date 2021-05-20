@@ -55,13 +55,23 @@
     
    
     
-    
-    
-    <form class="form-inline my-2 my-lg-0 " action="login"> 
+    <?php
+    if(!isset($_SESSION['use'])){
+    $sinlogin = "  <form class='form-inline my-2 my-lg-0' action='login'> 
       
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Iniciar Sesión</button>
-    </form>
+    <button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Iniciar Sesión</button>
+  </form>" ;
+
+echo $sinlogin ;
+    }else{
+      $conlogin = "  <form class='form-inline my-2 my-lg-0' action='main/cerrarsesion'> 
+      <a class='nav-link' href='constant('URL') ubicaciones '>". $_SESSION['use'] ."</a>
+      <button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Salir </button>
+    </form>" ;
+echo $conlogin ;
+    }
    
+   ?>
   </div>
 </nav>
 
