@@ -6,6 +6,18 @@
 
 <div class="img-fluid" style="max-width:100%; height: auto; background-image: url('public/img/login.jpg'); background-repeat: no-repeat;
 background-position: center; background-size: cover; background-attachment: fixed;">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
