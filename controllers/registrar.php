@@ -21,7 +21,7 @@ class registrar extends Controlador
 		require_once("$fileName");
 
 	}
-    function regitrar(){
+    function registrarusuario(){
         $objmodel = new stock_model();
         $p_nombre = $_POST["p_nombre"] ;
         $p_apellido = $_POST["p_apellido"] ;
@@ -42,6 +42,9 @@ class registrar extends Controlador
 
 
 
+        }else{
+
+            header("Location:".  constant('URL')."registrar?v=GHRTADFADWFASDFDFADFEFCVEFA23XFAF");
         }
 
 

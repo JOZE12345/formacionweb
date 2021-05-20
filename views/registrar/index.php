@@ -12,64 +12,80 @@ background-position: center; background-size: cover; background-attachment: fixe
                 <div class="form-content">
                     <div class="form-items">
                         <h3>Registro Restaurant</h3>
-                        <p>Fill in the data below.</p>
-                        <form class="requires-validation" novalidate>
+                        <?php
+
+if(isset($_GET["v"])){
+
+  if($_GET["v"]=="GHRTADFADWFASDFDFADFEFCVEFA23XFAF"){
+	echo "<h4 class='display-14 text-danger text-center bg-dark' >INGRESE SUS DATOS CORRECTAMENTE </h4>" ;
+  }
+}
+
+?>
+                        <p class="font-weight-bold">Escriba sus datos a continuacion.</p>
+                        <form class="requires-validation" novalidate method="post" action="registrar/registrarusuario">
 
                             <div class="col-md-12">
-                               <input class="form-control" type="text" name="name" placeholder="Full Name" required>
-                               <div class="valid-feedback">Username field is valid!</div>
-                               <div class="invalid-feedback">Username field cannot be blank!</div>
+                               <input class="form-control" type="text" name="p_nombre" placeholder="Nombre" required>
+                               <div class="valid-feedback">Ingresa un nombre valido!</div>
+                               <div class="invalid-feedback">Ingresa un dato valido !</div>
                             </div>
-
                             <div class="col-md-12">
-                                <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
-                                 <div class="valid-feedback">Email field is valid!</div>
-                                 <div class="invalid-feedback">Email field cannot be blank!</div>
+                               <input class="form-control" type="text" name="p_apellido" placeholder="Apellido" required>
+                               <div class="valid-feedback">Ingresa un apellido valido!</div>
+                               <div class="invalid-feedback">Ingresa un dato valido !</div>
                             </div>
+                            <div class="col-md-12">
+                               <input class="form-control" type="text" name="p_dni" placeholder="Dni" required>
+                               <div class="valid-feedback">Ingresa un dni valido!</div>
+                               <div class="invalid-feedback">Ingresa un dato valido !</div>
+                            </div>
+                            <div class="col-md-12">
+                               <input class="form-control" type="text" name="p_telefono" placeholder="Telefono" required>
+                               <div class="valid-feedback">Ingresa un telefono valido!</div>
+                               <div class="invalid-feedback">Ingresa un dato valido !</div>
+                            </div>
+                            <div class="col-md-12">
+                               <input class="form-control" type="text" name="p_direccion" placeholder="Direccion" required>
+                               <div class="valid-feedback">Ingresa una direccion valida!</div>
+                               <div class="invalid-feedback">Ingresa un dato valido !</div>
+                            </div>
+                            <div class="col-md-12">
+                               <input class="form-control" type="text" name="p_usuario" placeholder="Usuario" required>
+                               <div class="valid-feedback">Ingresa un usuario valido!</div>
+                               <div class="invalid-feedback">Ingresa un dato valido !</div>
+                            </div>
+                         
+                            <div class="col-md-12">
+                              <input class="form-control" type="password" name="p_contraseña" placeholder="contraseña" required>
+                               <div class="valid-feedback">Su contraseña no es valida</div>
+                               <div class="invalid-feedback">no es valido</div>
+                           </div>
 
                            <div class="col-md-12">
                                 <select class="form-select mt-3" required>
-                                      <option selected disabled value="">Position</option>
-                                      <option value="jweb">Junior Web Developer</option>
-                                      <option value="sweb">Senior Web Developer</option>
-                                      <option value="pmanager">Project Manager</option>
+                                      <option selected disabled name="p_cod_RolUsuario" value="">Nivel</option>
+                                      <option value="1">Administrador</option>
+                                      <option value="2">Cliente</option>
+                                     
                                </select>
-                                <div class="valid-feedback">You selected a position!</div>
-                                <div class="invalid-feedback">Please select a position!</div>
+                                <div class="valid-feedback">Seleccion un nivel!</div>
+                                <div class="invalid-feedback">SELECCIONA!</div>
                            </div>
 
 
-                           <div class="col-md-12">
-                              <input class="form-control" type="password" name="password" placeholder="Password" required>
-                               <div class="valid-feedback">Password field is valid!</div>
-                               <div class="invalid-feedback">Password field cannot be blank!</div>
-                           </div>
 
 
-                           <div class="col-md-12 mt-3">
-                            <label class="mb-3 mr-1" for="gender">Gender: </label>
-
-                            <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off" required>
-                            <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
-
-                            <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off" required>
-                            <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
-
-                            <input type="radio" class="btn-check" name="gender" id="secret" autocomplete="off" required>
-                            <label class="btn btn-sm btn-outline-secondary" for="secret">Secret</label>
-                               <div class="valid-feedback mv-up">You selected a gender!</div>
-                                <div class="invalid-feedback mv-up">Please select a gender!</div>
-                            </div>
 
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                          <label class="form-check-label">I confirm that all data are correct</label>
-                         <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+                          <label class="form-check-label">CONFIRMO QUE TODOS LOS DATOS SON VALIDOS</label>
+                         <div class="invalid-feedback">Escriba correctamente!</div>
                         </div>
                   
 
                             <div class="form-button mt-3">
-                                <button id="submit" type="submit" class="btn btn-primary">Register</button>
+                                <button id="submit" type="submit" class="btn btn-primary">Registrar</button>
                             </div>
                         </form>
                     </div>
