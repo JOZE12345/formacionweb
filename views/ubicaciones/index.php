@@ -3,7 +3,7 @@
 
 ?>
 
-<div class="center">
+<div class="rigth">
   <select name="sources" id="sources" class="custom-select sources" placeholder="Source Type">
     <option value="Ancón">Ancón</option>
     <option value="Barranco">Barranco</option>
