@@ -22,7 +22,7 @@
 <script src="<?php echo constant('URL') ?>public/js/registro.js"></script>
 
 <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZfAM8VJ5UGRSnnqwxNPP9NKfQKafJIU&callback=initMap">
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZfAM8VJ5UGRSnnqwxNPP9NKfQKafJIU&callback=initMap">
     </script>
         <title>RESTAURANTE </title>
   </head>
@@ -70,7 +70,7 @@
 echo $sinlogin ;
     }else{
       $conlogin = "  <form class='form-inline my-2 my-lg-0' action='main/cerrarsesion'> 
-      <a class='nav-link' href='constant('URL') ubicaciones '>". $_SESSION['use'] ."</a>
+      <a class='nav-link' href='perfil '>". $_SESSION['use'] ."</a>
       <button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Salir </button>
     </form>" ;
 echo $conlogin ;
