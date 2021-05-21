@@ -48,25 +48,28 @@ class login
         
     
         if((isset($_POST["usuario"])) && (isset($_POST["passw"]))){
-             $entidadcode->usuario_set($_POST["usuario"]);
-             $entidadcode->clave_set($_POST["passw"]);
-            //session_start();
-           // echo "hola2";
-            $entidadcode = $cod->inic($entidadcode,8);
-         //   echo "hola3";
-            $_SESSION['user'] = $entidadcode->usuario_get();
-            $_SESSION['pass'] = $entidadcode->clave_get();
-         //   echo "hola4";
+          
             $estado = $stock_model->validaringresocod($_POST["usuario"],($_POST["passw"])) ;   
           //  echo var_dump($estado);
             
             $recuperarnombre = $estado[0];
-           // echo var_dump($recuperarnombre);  
+           echo var_dump($recuperarnombre);  
           
                 //mejor esto igual al validar el estado 
-                if(!is_null($recuperarnombre["nombre"])){                   
+                if(!is_null($recuperarnombre["nombre"])){        
+                    echo "ga";
+                    $entidadcode->usuario_set($_POST["usuario"]);
+                    $entidadcode->clave_set($_POST["passw"]);
+                   //session_start();
+                  // echo "hola2";
+                   $entidadcode = $cod->inic($entidadcode,8);
+                //   echo "hola3";
+                   $_SESSION['user'] = $entidadcode->usuario_get();
+                  
+                   $_SESSION['pass'] = $entidadcode->clave_get();
+                //   echo "hola4";           
                   // echo $recuperarnombre["nombre"] ;
-                                
+                  $_SESSION['use'] = $_POST["usuario"];
                                 
                                 $_SESSION['r'] = "main";
                                // $_SESSION['use'] = $_POST["usuario"];
@@ -77,7 +80,7 @@ class login
                
               
                 }else{
-                    header("Location:".  constant('URL')  ."login?v=GHRTADFADWFASDFDFADFEFCVEFA23XFAF");
+                  header("Location:".  constant('URL')  ."login?v=GHRTADFADWFASDFDFADFEFCVEFA23XFAF");
     
                 }
                 

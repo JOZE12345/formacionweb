@@ -24,27 +24,27 @@ background-position: center; background-size: cover; background-attachment: fixe
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <p class="m-b-10 f-w-600">Nombre</p>
-                                        <h6 class="text-muted f-w-400">Jasdsadasd</h6>
+                                        <h6 class="text-muted f-w-400"><?php  echo $datosusuario["Nombre"]; ?></h6>
                                     </div>
                                     <div class="col-sm-6">
                                         <p class="m-b-10 f-w-600">Apellido</p>
-                                        <h6 class="text-muted f-w-400" name=<?php echo $_SESSION['use'] ?>></h6>
+                                        <h6 class="text-muted f-w-400" name=""><?php  echo $datosusuario["apellido"]; ?></h6>
                                     </div>
                                     <div class="col-sm-6">
                                         <p class="m-b-10 f-w-600">Dni</p>
-                                        <h6 class="text-muted f-w-400">fsdf4</h6>
+                                        <h6 class="text-muted f-w-400"><?php  echo $datosusuario["dni"]; ?></h6>
                                     </div>
                                     <div class="col-sm-6">
                                         <p class="m-b-10 f-w-600">Telefono</p>
-                                        <h6 class="text-muted f-w-400">fsdf4</h6>
+                                        <h6 class="text-muted f-w-400"><?php  echo $datosusuario["telefono"]; ?></h6>
                                     </div>
                                     <div class="col-sm-6">
                                         <p class="m-b-10 f-w-600">Direccion</p>
-                                        <h6 class="text-muted f-w-400">fsdf4</h6>
+                                        <h6 class="text-muted f-w-400"><?php  echo $datosusuario["direccion"]; ?></h6>
                                     </div>
                                     <div class="col-sm-6">
                                         <p class="m-b-10 f-w-600">Usuario</p>
-                                        <h6 class="text-muted f-w-400">fsdf4</h6>
+                                        <h6 class="text-muted f-w-400"><?php  echo $datosusuario["usuario"]; ?></h6>
                                     </div>    
                                 <ul class="social-link list-unstyled m-t-40 m-b-10">
                                     <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="facebook" data-abc="true"><i class="mdi mdi-facebook feather icon-facebook facebook" aria-hidden="true"></i></a></li>
