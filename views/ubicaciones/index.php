@@ -6,7 +6,7 @@
 	$(document).ready(function(){
 
 		initMap(-11.878659770295092,-77.01935938191203);
-		cargarajax(1);
+		//cargarajax(1);
 
 	});
 </script>
