@@ -23,7 +23,8 @@ class confirmarcontraseña extends Controlador
         //if(isset($_SESSION)){}
         $codigoenviado = $_GET["v"];
       
-        echo $_COOKIE["random"];
+       // echo $_COOKIE["random"];
+       if(isset($_COOKIE["random"])){
         if($_COOKIE["random"]==$codigoenviado)      {
           
            
@@ -32,6 +33,7 @@ class confirmarcontraseña extends Controlador
           //  header("Location:".  constant('URL')."login?e=asdgfdgdfafdfdsf");
 
         }
+    }
 		//Incluir el archivo (codigo) de la vista   
 		require_once("$fileName");
 
