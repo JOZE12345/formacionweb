@@ -57,7 +57,8 @@ class login
           
                 //mejor esto igual al validar el estado 
                 if(!is_null($recuperarnombre["nombre"])){        
-                    echo "ga";
+               
+                    $_SESSION["rol_usuario"] = $recuperarnombre["cod_RolUsuario"] ;
                     $entidadcode->usuario_set($_POST["usuario"]);
                     $entidadcode->clave_set($_POST["passw"]);
                    //session_start();
@@ -67,6 +68,8 @@ class login
                    $_SESSION['user'] = $entidadcode->usuario_get();
                   
                    $_SESSION['pass'] = $entidadcode->clave_get();
+
+                  
                 //   echo "hola4";           
                   // echo $recuperarnombre["nombre"] ;
                   $_SESSION['use'] = $_POST["usuario"];

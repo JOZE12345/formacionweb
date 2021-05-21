@@ -61,17 +61,33 @@ if(isset($_GET["v"])){
                                <div class="valid-feedback">Su contraseña no es valida</div>
                                <div class="invalid-feedback">no es valido</div>
                            </div>
+<?php 
+ 
+if(isset($_SESSION["rol_usuario"])){
+    if($_SESSION["rol_usuario"]=="1"){
 
-                           <div class="col-md-12">
-                                <select class="form-select mt-3" required name="p_cod_RolUsuario">
-                                      <option selected disabled  value="">Nivel</option>
-                                      <option value="1">Administrador</option>
-                                      <option value="2">Cliente</option>
-                                     
-                               </select>
-                                <div class="valid-feedback">Seleccion un nivel!</div>
-                                <div class="invalid-feedback">SELECCIONA!</div>
-                           </div>
+        $administrador = "<div   class='col-md-12'>
+        <select  class='form-select mt-3' required name='p_cod_RolUsuario'>
+              <option selected disabled  value=''>Nivel</option>
+              <option value='1'>Administrador</option>
+              <option value='2'>Cliente</option>
+             
+       </select>
+        <div class='valid-feedback'>Seleccion un nivel!</div>
+        <div class='invalid-feedback'>SELECCIONA!</div>
+   </div>"; 
+     
+        echo $administrador ;
+    }
+
+}else{
+    $cliente = "
+    <input id='escondido' name='p_cod_RolUsuario' type=
+    'hidden' value='2'>" ;
+    echo $cliente ;
+}
+?>
+                           
 
 
 

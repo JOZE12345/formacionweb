@@ -45,12 +45,26 @@
       <li class="nav-item">
         <a class="nav-link" href="<?php echo constant('URL') ?>ubicaciones ">Ubicaciones</a>
       </li>
-      <li class="nav-item dropdown">
+
+      <?php if(isset($_SESSION["rol_usuario"])){
+    if($_SESSION["rol_usuario"]=="1"){
+
+        $hideen = null; 
+    }else if($_SESSION["rol_usuario"]=="2"){
+      $hidden = "hidden" ;
+  } 
+
+}else{
+    $hidden = "hidden" ;
+} ?>
+
+
+      <li  <?php echo $hidden ?>   class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Segundo
+          Administrador
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Tercero</a>
+          <a class="dropdown-item" href="<?php echo constant('URL') ?>registrar ">Agregar Usuario</a>
           <a class="dropdown-item" href="#">Cuarto</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Quinto</a>
