@@ -134,11 +134,11 @@
 
 
         }
-        public function get_tienda_inicial()
+        public function restaurantes($idrestaurante)
         {
-            clase_conexioninicial::cargarajax();
-            $this->_bd = clase_conexioninicial::conectar();
-            $cadenasql = "select * from proc_vist_Logueo_Almacen();";
+            clase_conexion::cargarajax();
+            $this->_bd = clase_conexion::conectar();
+            $cadenasql = "call  proc_restaurantes(".$idrestaurante. ");";
             $registros = $this->_bd->query($cadenasql);
             $fila = $registros->fetchAll();
             clase_conexion::desconectar();

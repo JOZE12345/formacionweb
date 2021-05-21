@@ -6,6 +6,7 @@
 	$(document).ready(function(){
 
 		initMap(-11.878659770295092,-77.01935938191203);
+		cargarajax(1);
 
 	});
 </script>
@@ -60,6 +61,7 @@ $('#sources').on('change', function() {
 if(this.value==1){
 
 	initMap(-11.878659770295092,-77.01935938191203);
+	
 
 }else if(this.value==2){
 	initMap(-11.956375909125589,-77.05213960007984);
@@ -74,30 +76,40 @@ if(this.value==1){
 	initMap(-12.072465786719935,-76.94328383222434);
 
 }
+cargarajax(this.value);
 });
- /*url="http://localhost/pvstock/controllers/maps.php";
+
+function cargarajax($valor){
+
+	url="http://localhost/formacion/formacionweb/controllers/maps.php";
       var parametros={
-            "empresa": empresa 
+            "restaurante": $valor
 
         };
-        if(empresa!='')
-
+        if($valor!='')
+//alert("ga");
         {
         $.ajax({
 
             data: parametros,
             url: url,
             type: 'post',
+	
             success: function(response)
+			
             { 
-                $("#map").html(response);
+			//	alert("gi");
+                $("#platos").html(response);
               //  $("#loginModal").modal("show");
             }            
 
         });
         }
 
-});*/
+}
+
+
+
 
 
 function SeleccionarRestaurante(restaurante){

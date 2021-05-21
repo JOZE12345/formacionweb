@@ -1,7 +1,7 @@
 <?php
 
-require_once("../bd/clase_conexioninicial.php");
-require_once("../modelo/stock_model.php");
+require_once("../bd/clase_conexion.php");
+require_once("../models/stock_model.php");
 
 
 
@@ -10,51 +10,41 @@ $objstock = new stock_model();
 
 $opciones = "";
 
-    if($_POST["empresa"]!='nada')
+    if($_POST["restaurante"]!='')
     {
-      
-        $tienda  =  $objstock->get_tienda_inicial();
+        $idrestaurante = $_POST["restaurante"];
+        $resta  =  $objstock->restaurantes($idrestaurante);
 
-        $empresa = $_POST["empresa"];
-        $opciones = "<div class='card-deck'></div>";
+       
+        $opciones = "<div class='card-deck'>";
         $contador = 0 ;
-        foreach ($tienda as $fila) 
+        foreach ($resta as $fila) 
 	    {
-            $nuevaopcion =  " <div class='card-deck'>
+            $nuevaopcion =  " 
             <div class='card'>
-                <img class='card-img-top' src='".$fila["_descalmacen"]."'alt='Card image cap'>
-                <div class='card-body'><h5 class='card-title'>".$fila["_descalmacen"] ."</h5>
-                <p class='card-text'>".$fila["_descalmacen"]  ." <p class='card-text'><small class='text-muted'>". $fila["_descalmacen"] . "</small></p> </div>
-                </div>".
-                
-                
-                
-                "<div class='card'>
-                <img class='card-img-top' src='".$fila["_descalmacen"]."'alt='Card image cap'>
-                <div class='card-body'><h5 class='card-title'>".$fila["_descalmacen"] ."</h5>
-                <p class='card-text'>".$fila["_descalmacen"]  ." <p class='card-text'><small class='text-muted'>". $fila["_descalmacen"] . "</small></p> </div>
-                </div>".
-
-
-                "<div class='card'>
-                <img class='card-img-top' src='".$fila["_descalmacen"]."'alt='Card image cap'>
-                <div class='card-body'><h5 class='card-title'>".$fila["_descalmacen"] ."</h5>
-                <p class='card-text'>".$fila["_descalmacen"]  ." <p class='card-text'><small class='text-muted'>". $fila["_descalmacen"] . "</small></p> </div>
+                <img class='card-img-top' src='".$fila["foto"]."'alt='Card image cap' width='100' height='250'>
+                <div class='card-body'><h5 class='card-title'>".$fila["nombrePlato"] ."</h5>
+                <p class='card-text'>".$fila["nombrePermisoSalubridad"]  ." <p class='card-text'><small class='text-muted'>". $fila["nombreTipo"] . "</small></p> </div>
                 </div>"
+                
+                
+                
+              
 
 
 
                 
                  ;
            if($contador==3){
-            $opciones = $opciones . "</div><div class='card-deck'>";
+            $opciones = $opciones . "</div>aqui termina<div class='card-deck'>";
 
-
+            $contador = 0 ;
            }
 
 
-                 $opciones = $opciones . $nuevaopcion ;
+           $opciones = $opciones . $nuevaopcion ;    
             $contador = $contador + 1 ;
+            echo $contador;
         }
        
 
@@ -92,7 +82,7 @@ $opciones = "";
 
 
     }else{
-        $opciones = "<option selected>Sucursal...</option>";
+        $opciones = "<div class='card-deck'></div>";
 
 
     }
