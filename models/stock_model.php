@@ -165,8 +165,24 @@
                 clase_conexion::desconectar();
                 false;
             }
+        }
 
-
+        public function mostrarUsuario($p_usuario)
+        {
+            clase_conexion::cargar();
+            $this->_bd = clase_conexion::conectar();
+            $cadenasql = "CALL proc_mostrarUsuario('".$p_usuario."');";
+            $registros = $this->_bd->query($cadenasql);
+            if($registros!=null){
+                //   echo "paso";
+               $fila = $registros->fetchAll();
+               clase_conexion::desconectar();
+               return $fila ; 
+               }else{
+                  // echo " no paso";
+                   clase_conexion::desconectar();
+                   false;
+               }
         }
         public function get_periodo()
         {
@@ -223,7 +239,7 @@
 
         }
 
-
+       
     }
 
 
