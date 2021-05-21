@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/hover.css">
     <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/regis.css">
     <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/ubicaciones.css">
+    <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/perfil.css">
     <link rel="shortcut icon" href="<?php echo constant('URL') ?>public/img/pvsac1.ico">
     <link rel="shortcut icon" href="<?php echo constant('URL') ?>public/img/navbar2.ico">
 
