@@ -105,6 +105,21 @@
 
         }
 
+        public function restablecercontraseña($p_contraseña,$p_usuairo)
+        {
+            clase_conexion::cargar();
+            $this->_bd = clase_conexion::conectar();
+
+            $cadenasql = "CALL restablecercontraseña('".$p_contraseña."','".$p_usuairo."')";
+            $insertar = $this->_bd->prepare($cadenasql);
+
+            $insertar->execute();
+            clase_conexion::desconectar();
+
+
+
+        }
+
 
         public function updatestock($idinvental,$idproduct,$stock)
         {
