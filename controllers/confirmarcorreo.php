@@ -38,17 +38,17 @@ $oMail->CharSet = "UTF-8" ;
 /*
 $oMail->Username="ventas@plusvision.com.pe";
 $oMail->Password="@Vision2021@";*/
-$oMail->Username="informacion@plusvisionperu.com";
-$oMail->Password="infoplusvi2020";
+$oMail->Username="@";
+$oMail->Password="in";
 /*$oMail->Username="pepitosamoradelgadillo@gmail.com";
 $oMail->Password="pepitosamora1234";*/
 //destinatario
 
 //$oMail->setFrom("ventas@plusvision.com.pe","PLUS VISION PRUEBA");
-$oMail->setFrom("informacion@plusvisionperu.com","PLUS VISION PRUEBA");
+$oMail->setFrom("informacio","PRUEBA");
 /*$oMail->addAddress("ventas@plusvision.com.pe" ,$nombre);*/
 //$oMail->addAddress("ventas@plusvision.com.pe" ,$nombre);/*esto esta mal*/
-$oMail->addAddress("informacion@plusvisionperu.com" ,$nombre);/*esto esta mal*/
+$oMail->addAddress("informac" ,$nombre);/*esto esta mal*/
 
 
 $oMail->SMTPKeepAlive = true; 
