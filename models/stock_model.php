@@ -121,27 +121,14 @@
         }
 
 
-        public function updatestock($idinvental,$idproduct,$stock)
+
+
+      
+        public function restaurantes($idrestaurante)
         {
             clase_conexion::cargarajax();
             $this->_bd = clase_conexion::conectar();
-
-            $cadenasql = "select * from proc_update_stockxalmacen_periodo_all_cantstockinvent(".$idinvental.",".$idproduct.",".$stock.")";
-            $insertar = $this->_bd->prepare($cadenasql);
-
-            $insertar->execute();
-            clase_conexion::desconectar();
-
-
-
-        }
-
-
-        public function get_tienda()
-        {
-            clase_conexion::cargar();
-            $this->_bd = clase_conexion::conectar();
-            $cadenasql = "select * from proc_vist_Logueo_Almacen();";
+            $cadenasql = "call  proc_restaurantes(".$idrestaurante. ");";
             $registros = $this->_bd->query($cadenasql);
             $fila = $registros->fetchAll();
             clase_conexion::desconectar();
@@ -149,11 +136,12 @@
 
 
         }
-        public function restaurantes($idrestaurante)
+
+        public function Todosrestaurantes()
         {
-            clase_conexion::cargarajax();
+            clase_conexion::cargar();
             $this->_bd = clase_conexion::conectar();
-            $cadenasql = "call  proc_restaurantes(".$idrestaurante. ");";
+            $cadenasql = "call  proc_Todos_restaurantes();";
             $registros = $this->_bd->query($cadenasql);
             $fila = $registros->fetchAll();
             clase_conexion::desconectar();
