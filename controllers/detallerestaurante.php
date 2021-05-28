@@ -1,5 +1,5 @@
 <?php
-class tablarestaurante extends Controlador
+class detallerestaurante extends Controlador
 {
 	
 	function __construct()
@@ -12,19 +12,16 @@ class tablarestaurante extends Controlador
 	}
 	function mostrarVista()
 	{
-		$nombre = "tablarestaurante/index";
+		$nombre = "detallerestaurante/index";
 		//Codigo para mostrar la Vista
 		//Generar el nombre de la vista: views/consulta/index.php
 		$fileName = "views/" . $nombre . ".php";
 
-        
-        $objstock = new stock_model();
-        $restaurantes  =  $objstock->Todosrestaurantes();
-        $administradores  =  $objstock->Administradores();
 		//Incluir el archivo (codigo) de la vista
 		require_once("$fileName");
 
 	}
+
 
 }
 ?>

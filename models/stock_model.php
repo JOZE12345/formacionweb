@@ -137,11 +137,49 @@
 
         }
 
+        public function Menus($idrestaurante)
+        {
+            clase_conexion::cargar();
+            $this->_bd = clase_conexion::conectar();
+            $cadenasql = "call  proc_restaurantes(".$idrestaurante. ");";
+            $registros = $this->_bd->query($cadenasql);
+            $fila = $registros->fetchAll();
+            clase_conexion::desconectar();
+            return $fila ; 
+
+
+        }
+
         public function Todosrestaurantes()
         {
             clase_conexion::cargar();
             $this->_bd = clase_conexion::conectar();
             $cadenasql = "call  proc_Todos_restaurantes();";
+            $registros = $this->_bd->query($cadenasql);
+            $fila = $registros->fetchAll();
+            clase_conexion::desconectar();
+            return $fila ; 
+
+
+        }
+        public function Administradores()
+        {
+            clase_conexion::cargar();
+            $this->_bd = clase_conexion::conectar();
+            $cadenasql = "call  TraerAdministradores();";
+            $registros = $this->_bd->query($cadenasql);
+            $fila = $registros->fetchAll();
+            clase_conexion::desconectar();
+            return $fila ; 
+
+
+        }
+
+        public function lat_lngRestaurantes()
+        {
+            clase_conexion::cargar();
+            $this->_bd = clase_conexion::conectar();
+            $cadenasql = "call  lat_lngRestaurantes();";
             $registros = $this->_bd->query($cadenasql);
             $fila = $registros->fetchAll();
             clase_conexion::desconectar();

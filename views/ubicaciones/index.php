@@ -15,11 +15,21 @@
 <br>
 <div class="rigth">
   <select name="sources" id="sources" class="custom-select sources" placeholder="Source Type">
-    <option value="1" >El ruedo restobar</option>
-    <option value="2">Raja Tabla</option>
+
+  <?php
+  foreach ($restaurantes as $fila) 
+	    {?>
+    <option  value=<?php echo $fila["restaurante_ID"]."|".$fila["lat"]."|".$fila["lng"]?> ><?php echo $fila["nombreRestaurante"]?></option>
+
+
+	<?php
+      }
+
+?>
+    <!--<option value="2">Raja Tabla</option>
     <option value="3">restaurante cevicheria puerto tumbes</option>
     <option value="4">cevicheria popeye </option>
-    <option value="5">El abuelo wanka</option>
+    <option value="5">El abuelo wanka</option>-->
    
   </select>
 </div>
@@ -57,13 +67,25 @@
 <script>
 	
 $('#sources').on('change', function() {
-  SeleccionarRestaurante(this.value);
-if(this.value==1){
 
+ var dat_restaurante = this.value.split("|");
+
+  SeleccionarRestaurante(dat_restaurante[0]);
+
+ // alert(dat_restaurante[1]);
+  var lat  = parseFloat(dat_restaurante[1].trim());
+  var lng = parseFloat(dat_restaurante[2].trim());
+  initMap(lat,lng);
+
+  //alert(dat_restaurante[0]);
+  cargarajax(dat_restaurante[0]);
+/*if(this.value==1){
+
+	var dat_restaurant = 
 	initMap(-11.878659770295092,-77.01935938191203);
 	
 
-}else if(this.value==2){
+}*//*else if(this.value==2){
 	initMap(-11.956375909125589,-77.05213960007984);
 
 }else if(this.value==3){
@@ -76,7 +98,7 @@ if(this.value==1){
 	initMap(-12.072465786719935,-76.94328383222434);
 
 }
-cargarajax(this.value);
+cargarajax(this.value);*/
 });
 
 function cargarajax($valor){
