@@ -166,7 +166,24 @@ var d = new Date();
 </div>
 
 
+</script>
 
+
+<style>
+.container     { position: relative; overflow: hidden; }
+.container img { position: absolute; }
+</style>
+
+<script type="text/javascript">
+$image = $('.container img');
+width = $image.width();
+height = $image.height();
+
+$image.css({
+    left: 0 - (width / 2),
+    top: 0 - (height / 2)
+});
+</script>
 
 <?php
 	require_once("views/footer.php");

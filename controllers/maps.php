@@ -22,7 +22,7 @@ $opciones = "";
 	    {
             $nuevaopcion =  " 
             <div class='card'>
-                <img class='card-img-top' src='".$fila["foto"]."'alt='Card image cap' width='100' height='250'>
+                <img class='card-img-top container' src='".$fila["foto"]."'alt='Card image cap' >
                 <div class='card-body'><h5 class='card-title'>".$fila["nombrePlato"] ."</h5>
                 <p class='card-text'>".$fila["nombrePermisoSalubridad"]  ." <p class='card-text'><small class='text-muted'>". $fila["nombreTipo"] . "</small></p> </div>
                 </div>"

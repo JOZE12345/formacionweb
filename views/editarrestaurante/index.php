@@ -76,6 +76,7 @@
     <tr>
     <th scope="col">Plato</th>
 <th scope="col">Foto</th>
+<th scope="col">Ver Imagen</th>
 <th scope="col">Precio</th>
 <th scope="col">Tipo</th>
 
@@ -88,6 +89,15 @@
     <tr>
       <th scope="row"><?php echo $fila["nombrePlato"] ?></th>
       <td><?php echo $fila["foto"] ?></td>
+      <td ><button <?php $ver = "onclick=cambiarplato('".$fila["foto"]."')" ;
+      echo $ver ;
+      
+      
+      
+      
+      
+      
+      ?> type="button" class="btn btn-secondary btn-sm">Ver</button></td>
       <td><?php echo $fila["precioPLato"] ?></td>
       <td><?php echo $fila["nombreTipo"] ?></td>
 
@@ -100,14 +110,37 @@
 </table>
 
 
+<img id ="plato" src="100" alt="100" class="container img-thumbnail"> 
+
+<script>
+	
+function cambiarplato(src){
+
+  $("#plato").attr("src",src);
+ 
+}
 
 
 
 
+</script>
 
 
+<style>
+.container     { position: relative; overflow: hidden; }
+.container img { position: absolute; }
+</style>
 
+<script type="text/javascript">
+$image = $('.container img');
+width = $image.width();
+height = $image.height();
 
+$image.css({
+    left: 0 - (width / 2),
+    top: 0 - (height / 2)
+});
+</script>
 <?php
 	require_once("views/footer.php");
 
