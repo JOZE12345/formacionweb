@@ -25,6 +25,14 @@ class tablarestaurante extends Controlador
 		require_once("$fileName");
 
 	}
+	function eliminar()
+	{
+		$idrestaurante= $_GET["id"];
+		$objstock = new stock_model();
+		$objstock->EliminarRestaurantes($idrestaurante);
+		header("Location:".  constant('URL')  ."tablarestaurante");
+
+	}
 
 }
 ?>

@@ -161,7 +161,7 @@ function cargarajax(){
 
   randomcookie($random);
 
-	url="http://localhost/formacion/formacionweb/controllers/confirmarcorreo.php";
+	url="http://localhost/formacion/controllers/confirmarcorreo.php";
       var parametros={
             "email": $valor,
             "random":$random

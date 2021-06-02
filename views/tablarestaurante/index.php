@@ -41,7 +41,8 @@
       <td><?php echo $fila["nombrePermisoSalubridad"] ?></td>
       <td><?php echo $fila["nombrePermisoMunicipal"] ?></td>
       <td><form  method="get" action="<?php  echo constant('URL') ."editarrestaurante" ?>"><input type="hidden" name="id" value="<?php echo $fila["restaurante_ID"] ?>"> <button type="subtmit" class="btn btn-outline-info">Editar</button></form></td>
-      <td><button type="button" class="btn btn-outline-info">Eliminar</button></td>
+      
+      <td><form  method="get" action="<?php  echo constant('URL') ."tablarestaurante/eliminar" ?>"><input type="hidden" name="id" value="<?php echo $fila["restaurante_ID"] ?>"> <button type="subtmit" class="btn btn-outline-info">Eliminar</button></form></td>
     </tr>
   <?php
       }

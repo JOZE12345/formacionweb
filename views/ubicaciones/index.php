@@ -103,7 +103,7 @@ cargarajax(this.value);*/
 
 function cargarajax($valor){
 
-	url="http://localhost/formacion/formacionweb/controllers/maps.php";
+	url="http://localhost/formacion/controllers/maps.php";
       var parametros={
             "restaurante": $valor
 

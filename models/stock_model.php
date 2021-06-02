@@ -185,6 +185,16 @@
             clase_conexion::desconectar();
             return $fila ; 
 
+        }
+        public function EliminarRestaurantes($id)
+        {
+            clase_conexion::cargar();
+            $this->_bd = clase_conexion::conectar();
+            $cadenasql = "call  EliminarRestaurantes(".$id.");";
+            $registros = $this->_bd->query($cadenasql);
+            $fila = $registros->fetchAll();
+            clase_conexion::desconectar();
+            return $fila ;
 
         }
         public function validaringresocod($nrdoc,$pass)
