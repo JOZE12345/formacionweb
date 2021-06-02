@@ -21,7 +21,11 @@ class detallerestaurante extends Controlador
 		require_once("$fileName");
 
 	}
+	function agregar()
+	{
 
+	
+	}
 
 }
 ?>

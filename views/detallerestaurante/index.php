@@ -6,10 +6,10 @@
 <h1 class="display-4 text-center">Informacion - Restaurantes</h1>
 <br>
 <br>
-<form>
+<form action="<?php  echo constant('URL') ."detallerestaurante/agregar" ?>" method="POST">
   <div class="form-group">
     <label for="exampleFormControlInput1"><strong>Nombre Restaurante</strong></label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="restaurante..">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="restaurante.." name="NombreRestaurante">
   </div>
   <div class="form-group ">
     <label for="exampleFormControlInput1" class="font-weight-bold">Dirección</label>
@@ -21,8 +21,8 @@
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1" class="font-weight-bold">Permiso - Municipal</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>Licencia de Funcionamiento corporativa para mercados de abastos, galerías comerciales y centros comerciales (con ITSE previa)
+    <select class="form-control" id="exampleFormControlSelect1" name="permisomunicipal">
+      <option value="1">Licencia de Funcionamiento corporativa para mercados de abastos, galerías comerciales y centros comerciales (con ITSE previa)
 </option>
       <option>No cuenta con permiso - Municipal</option>
    
