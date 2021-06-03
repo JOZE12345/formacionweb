@@ -18,10 +18,17 @@ class editarrestaurante extends Controlador
 		$fileName = "views/" . $nombre . ".php";
         $objstock = new stock_model();
         $idrestaurante = $_GET["id"];
-        $restaurantes  =  $objstock->Menus($idrestaurante);
+		$variablesseparadas = explode("|", $idrestaurante);
+        $restaurantes  =  $objstock->Menus($variablesseparadas[0]);
+		$traer = $objstock->traerRestaurante($variablesseparadas[0],$variablesseparadas[1]);
+		$recuperarrestaurante = $traer[0];
 		//Incluir el archivo (codigo) de la vista
 		require_once("$fileName");
 
+	}
+	function editar()
+	{
+		
 	}
 
 

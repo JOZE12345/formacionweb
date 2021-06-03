@@ -6,37 +6,55 @@
 
 
 
+<?php 
+if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun permiso")
+{
+  $lista="selected";
+  $nolista="";
+} else{
+  $nolista="selected";
+}
+?>
+<?php 
+  if(trim($recuperarrestaurante["nombrePermisoMunicipal"])!="No Tiene ningun permiso")
+  {
+    $filita="selected";
+    $nofilita="";
+  }else{
+    $nofilita="selected";
+  }
 
+?>
 <h1 class="display-4 text-center">Informacion - Restaurantes</h1>
 <br>
 <br>
 <form>
   <div class="form-group">
     <label for="exampleFormControlInput1"><strong>Nombre Restaurante</strong></label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="restaurante..">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="restaurante.." value="<?php echo $recuperarrestaurante["nombreRestaurante"] ?>">
   </div>
   <div class="form-group ">
     <label for="exampleFormControlInput1" class="font-weight-bold">Dirección</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="jr..av..">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="jr..av.."  value="<?php echo $recuperarrestaurante["direccion"] ?>">
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1" class="font-weight-bold">Telefono</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0123456">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0123456" value="<?php echo $recuperarrestaurante["numero_Telf"] ?>">
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1" class="font-weight-bold">Permiso - Municipal</label>
     <select class="form-control" id="exampleFormControlSelect1">
-      <option>Licencia de Funcionamiento corporativa para mercados de abastos, galerías comerciales y centros comerciales (con ITSE previa)
+      <option <?php echo $filita?>>Licencia de Funcionamiento corporativa para mercados de abastos, galerías comerciales y centros comerciales (con ITSE previa)
 </option>
-      <option>No cuenta con permiso - Municipal</option>
+      <option <?php echo $nofilita?>>No cuenta con permiso - Municipal</option>
    
     </select>
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1" class="font-weight-bold">Permiso - Salubridad</label>
     <select class="form-control" id="exampleFormControlSelect1">
-      <option>Certificado de Registro Sanitario de Alimentos y Bebidas industrializados</option>
-      <option>No cuenta con permiso - salubridad</option>
+      <option <?php echo $lista ?>>Certificado de Registro Sanitario de Alimentos y Bebidas industrializados</option>
+      <option <?php echo $nolista ?>>No cuenta con permiso - salubridad</option>
    
     </select>
   </div>
@@ -45,7 +63,7 @@
     
   <div class="form-group">
     <label for="exampleFormControlInput1"></label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Latitud">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Latitud" >
   </div>
 
   <div class="form-group">

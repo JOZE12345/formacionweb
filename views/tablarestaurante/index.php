@@ -27,6 +27,7 @@
 <th scope="col">Telefono</th>
 <th scope="col">Permiso Salubridad</th>
 <th scope="col">Permiso Municipal</th>
+<th hidden ></th>
     </tr>
   </thead>
   <tbody>
@@ -40,7 +41,8 @@
       <td><?php echo $fila["numero_Telf"] ?></td>
       <td><?php echo $fila["nombrePermisoSalubridad"] ?></td>
       <td><?php echo $fila["nombrePermisoMunicipal"] ?></td>
-      <td><form  method="get" action="<?php  echo constant('URL') ."editarrestaurante" ?>"><input type="hidden" name="id" value="<?php echo $fila["restaurante_ID"] ?>"> <button type="subtmit" class="btn btn-outline-info">Editar</button></form></td>
+      <td><?php echo $fila["codrestaurante_detalle"] ?></td>
+      <td><form  method="get" action="<?php  echo constant('URL') ."editarrestaurante" ?>"><input type="hidden" name="id" value="<?php echo $fila["restaurante_ID"] ."|".$fila["codrestaurante_detalle"] ?>"> <button type="subtmit" class="btn btn-outline-info">Editar</button></form></td>
       
       <td><form  method="get" action="<?php  echo constant('URL') ."tablarestaurante/eliminar" ?>"><input type="hidden" name="id" value="<?php echo $fila["restaurante_ID"] ?>"> <button type="subtmit" class="btn btn-outline-info">Eliminar</button></form></td>
     </tr>

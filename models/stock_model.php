@@ -159,9 +159,24 @@
             $fila = $registros->fetchAll();
             clase_conexion::desconectar();
             return $fila ; 
+        }
 
+        public function traerRestaurante($p_restaurante_ID, $p_codrestaurante_detalle)
+        {
+            clase_conexion::cargar();
+            $this->_bd = clase_conexion::conectar();
+            $cadenasql = "call proc_Todos_restaurantes_ID(".$p_restaurante_ID.",".$p_codrestaurante_detalle.")";
+            $registros = $this->_bd->query($cadenasql);
+            $fila = $registros->fetchAll();
+            clase_conexion::desconectar();
+            return $fila ; 
 
         }
+
+
+
+
+
         public function Administradores()
         {
             clase_conexion::cargar();
