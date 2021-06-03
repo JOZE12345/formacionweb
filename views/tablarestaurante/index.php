@@ -12,7 +12,7 @@
   <a class="navbar-brand text-light" href="#">
     Restaurantes Existentes
   </a>
-  <form class="form-inline" action="<?php echo constant('URL') ?>detallerestaurante ">
+  <form class="form-inline" action="<?php echo constant('URL') . "detallerestaurante"?> ">
     <button class="btn btn-outline-success  bg-info my-2 my-sm-0 text-light" type="submit">AGREGAR NUEVO RESTAURANTE</button>
   </form>
 </nav>

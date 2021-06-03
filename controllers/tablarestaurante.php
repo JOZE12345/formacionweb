@@ -34,5 +34,6 @@ class tablarestaurante extends Controlador
 
 	}
 
+	
 }
 ?>

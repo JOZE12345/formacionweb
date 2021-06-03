@@ -197,6 +197,22 @@
             return $fila ;
 
         }
+
+
+        public function insertarRestaurante($p_nombreRestaurante,$p_direccion,$p_Telefono,$p_permiso,$lat,$lng)
+        {
+            clase_conexion::cargar();
+            $this->_bd = clase_conexion::conectar();
+            $cadenasql = "CALL InsertarRestaurante('".$p_nombreRestaurante."','".$p_direccion."',".$p_Telefono.",".$p_permiso.",'".$lat."','".$lng."')";
+            $insertar = $this->_bd->prepare($cadenasql);
+            $insertar->execute();
+            clase_conexion::desconectar();
+
+        }
+
+
+
+
         public function validaringresocod($nrdoc,$pass)
         {
             //echo "estamos validando ";
