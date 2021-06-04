@@ -29,27 +29,26 @@ class editarrestaurante extends Controlador
 	function editar()
 	{
 		$objmodel = new stock_model();
-		$p_nombreRestaurante =  $_POST["p_nombreRestaurante"] ;
-		$p_direccion = $_POST["p_direccion"];
-		$p_Telefono = $_POST["p_Telefono"];
-		$p_permiso = $_POST["p_permiso"];
-		$p_per_salu = $_POST["per_salu"];
-		$lat = $_POST["lat"]; 
-		$lng = $_POST["lng"];
-		$p_restaurante_ID = ["p_restaurante_ID"];
-		$p_codrestaurante_detalle = ["p_codrestaurante_detalle"];
-
-
-		if((trim($p_per_salu)!="No Tiene ningun permiso") && (trim($p_permiso)!="No Tiene ningun permiso"))
-		{
-			
-			$permisototal = 1 ;
-		} else{
-			$permisototal = 2 ;
+		$p_nombreRestaurante =  $_GET["p_nombreRestaurante"] ;
+		$p_direccion = $_GET["p_direccion"];
+		$p_Telefono = $_GET["p_Telefono"];
+		$p_permiso = $_GET["p_permiso"];
+		$p_per_salu = $_GET["per_salu"];
+		$lat = $_GET["lat"]; 
+		$lng = $_GET["lng"];
+		$p_restaurante_ID = $_GET["idrestaurante"];
+		$p_codrestaurante_detalle = $_GET["idrestaurantedetalle"];
+		$pemisototal = 0;
+	
+		if($p_permiso==1 || $p_per_salu == 1)
+		{	
+			$permisototal = 1;
 		}
-
-
+		else{
+			$permisototal = 2;
+		}
 		$objmodel->editarRestaurante($p_nombreRestaurante,$p_direccion, $p_Telefono, $permisototal,$lat,$lng,$p_restaurante_ID,$p_codrestaurante_detalle);
+		header("Location:".  constant('URL')."tablarestaurante");
 	}
 
 
