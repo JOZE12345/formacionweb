@@ -21,22 +21,31 @@ $opciones = "";
         foreach ($resta as $fila) 
 	    {
             $nuevaopcion =  " 
-            <div class='card'>
-                <img class='card-img-top container' src='".$fila["foto"]."'alt='Card image cap' >
-                <div class='card-body'><h5 class='card-title'>".$fila["nombrePlato"] ."</h5>
-                <p class='card-text'>".$fila["nombrePermisoSalubridad"]  ." <p class='card-text'><small class='text-muted'>". $fila["nombreTipo"] . "</small></p> </div>
-                </div>"
-                
-                
-                
+            
+            <div class='platos'>
+              <h15 class='title'>".$fila["nombrePlato"] ."</h15>
               
+           
 
-
-
+            
+                  <div class='row'>
+                    
+                    <img class='imagen ' src='".$fila["foto"]."'alt='Card image cap'>
+                    
+                    <div class='col-sm'>
+                    <p class='p'>TIPO CERTIFICADO:  ".$fila["nombrePermisoSalubridad"]  ." </p>
+                    </div>
+                    <div class='col-sm'>
+                    <p class='p'>TIPO PLATO:  ". $fila["nombreTipo"] . "</p>
+                    </div>
+                  </div>
+                </div>
+            </div> "     
+              
                 
                  ;
            if($contador==3){
-            $opciones = $opciones . "</div>aqui termina<div class='card-deck'>";
+            $opciones = $opciones ;
 
             $contador = 0 ;
            }
@@ -44,7 +53,7 @@ $opciones = "";
 
            $opciones = $opciones . $nuevaopcion ;    
             $contador = $contador + 1 ;
-            echo $contador;
+            
         }
        
 
@@ -88,5 +97,5 @@ $opciones = "";
     }
 
 
-print $opciones ;
+print $opciones . "</div>";
 ?>

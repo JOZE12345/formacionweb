@@ -7,6 +7,7 @@
   margin-right: auto;
 }
 
+
 *,
 *:before,
 *:after {
@@ -70,4 +71,103 @@ body {
 .button--icon {
   min-width: initial;
   padding: 0.5rem;
+}
+
+.platos
+{
+  display: flex;
+  width: 85%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 3px;
+ 
+  margin: auto;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgb(193, 229, 250);
+  background-clip: border-box;
+  border: 1px solid rgba(7, 1, 22, 0.125);
+  border-radius: 0.25rem;
+  background-color: #fff;
+}
+
+.platos .imagen{
+  width: 2px;
+  height: 200px;
+  position: relative;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75);
+  object-fit: cover;
+  filter: brightness(100%);
+  animation: escalar 1.5s infinite;
+  float: left;
+}
+
+.text.imagen
+{
+  z-index: 1;
+  width: 540px;
+}
+
+.title
+{
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.platos p{
+  font-size : 18px;
+  font-weight: 300;
+
+
+}
+
+.platos > .list-group {
+  border-top: inherit;
+  border-bottom: inherit;
+}
+.platos > .list-group:first-child {
+  border-top-width: 0;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.platos > .list-group:last-child {
+  border-bottom-width: 0;
+  border-bottom-right-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.25rem - 1px);
+}
+
+
+
+.imagen
+{
+  width: 350px;
+  height: 250px;
+  margin-bottom: 30px;
+  object-fit: cover;
+  filter: brightness(70%);
+  animation: escalar 1.5s infinite;
+}
+@keyframes escalar{
+  to{
+    transform: scale(1);
+  }from
+  {
+    transform: scale(1.05);
+  }
+}
+
+
+
+.imagen {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
 }
