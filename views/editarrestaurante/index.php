@@ -65,11 +65,11 @@ if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun perm
     
   <div class="form-group">
     <label for="exampleFormControlInput1"></label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Latitud" >
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Latitud" value="<?php echo $recuperarrestaurante["lat"] ?>">
   </div>
 
   <div class="form-group">
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Longitud">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Longitud" value="<?php echo $recuperarrestaurante["lng"] ?>">
   </div>
   <!--<div class="form-group">
     <label for="exampleFormControlTextarea1">Example textarea</label>
