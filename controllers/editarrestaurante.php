@@ -42,6 +42,7 @@ class editarrestaurante extends Controlador
 
 if((trim($p_per_salu)!="No Tiene ningun permiso") && (trim($p_permiso)!="No Tiene ningun permiso"))
 {
+	
 	$permisototal = 1 ;
 } else{
 	$permisototal = 2 ;
