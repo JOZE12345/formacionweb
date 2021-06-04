@@ -75,8 +75,7 @@ if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun perm
     <label for="exampleFormControlTextarea1">Example textarea</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>-->
-  <input type="hidden" name="idrestaurante"  value="<?php echo $variablesseparadas[0] ?>">
-  <input type="hidden"   name="idrestaurantedetalle" value="<?php echo $variablesseparadas[1] ?>">
+
   <button type="submit" class="btn btn-primary">ACTUALIZAR</button>
 </form>
 
