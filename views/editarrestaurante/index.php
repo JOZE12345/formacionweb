@@ -85,7 +85,7 @@ if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun perm
   <a class="navbar-brand text-light" href="#">
     MENU
   </a>
-  <form class="form-inline">
+  <form class="form-inline" action="<?php  echo constant('URL') ."platos" ?>">
     <button class="btn btn-outline-success  bg-info my-2 my-sm-0 text-light" type="submit">AGREGAR PLATO</button>
   </form>
 </nav>
