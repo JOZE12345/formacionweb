@@ -39,6 +39,15 @@ class editarrestaurante extends Controlador
 		$p_restaurante_ID = ["p_restaurante_ID"];
 		$p_codrestaurante_detalle = ["p_codrestaurante_detalle"];
 
+
+if((trim($p_per_salu)!="No Tiene ningun permiso") && (trim($p_permiso)!="No Tiene ningun permiso"))
+{
+	$permisototal = 1 ;
+} else{
+	$permisototal = 2 ;
+}
+
+
 		$objmodel->editarRestaurante($p_nombreRestaurante,$p_direccion, $p_Telefono, $permisototal,$lat,$lng,$p_restaurante_ID,$p_codrestaurante_detalle);
 	}
 
