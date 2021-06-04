@@ -89,8 +89,13 @@ if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun perm
   <a class="navbar-brand text-light" href="#">
     MENU
   </a>
-  <form class="form-inline" action="<?php  echo constant('URL') ."platos" ?>">
-    <button class="btn btn-outline-success  bg-info my-2 my-sm-0 text-light" type="submit">AGREGAR PLATO</button>
+  <form class="form-inline" action="<?php  echo constant('URL') ."platos" ?> " method="get">
+ 
+
+  <input type="hidden" name="idmenu"  value="<?php echo $codMenu["codMenu"]?>">
+  <input type="hidden"   name="idrestaurantedetalle" value="<?php echo $variablesseparadas[1] ?>">
+
+  <button class="btn btn-outline-success  bg-info my-2 my-sm-0 text-light" type="submit">AGREGAR PLATO</button>
   </form>
 </nav>
 <table class="table table-sm table-dark">
@@ -160,7 +165,7 @@ if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun perm
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button"  onclick="confirmarcontraseña()"  class="btn btn-primary">Enviar</button>
+       
       </div>
     </div>
   </div>

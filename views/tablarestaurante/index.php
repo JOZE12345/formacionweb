@@ -67,7 +67,7 @@
   <a class="navbar-brand text-light" href="#">
     Administradores Actuales
   </a>
-  <form class="form-inline">
+  <form class="form-inline" action="<?php  echo constant('URL') ."registrar" ?>">
     <button class="btn btn-outline-success  bg-info my-2 my-sm-0 text-light" type="submit">AGREGAR NUEVO ADMINISTRADOR</button>
   </form>
 </nav>

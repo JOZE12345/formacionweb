@@ -22,6 +22,8 @@ class editarrestaurante extends Controlador
         $restaurantes  =  $objstock->Menus($variablesseparadas[0]);
 		$traer = $objstock->traerRestaurante($variablesseparadas[0],$variablesseparadas[1]);
 		$recuperarrestaurante = $traer[0];
+		$codMenu =  $restaurantes[0];
+		
 		//Incluir el archivo (codigo) de la vista
 		require_once("$fileName");
 

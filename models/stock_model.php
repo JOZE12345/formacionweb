@@ -173,8 +173,45 @@
 
 
 
+        public function insertarMenu( $p_codrestaurante_detalle)
+        {
+            clase_conexion::cargar();
+            $this->_bd = clase_conexion::conectar();
+            $cadenasql = "call añadir_menu(".$p_codrestaurante_detalle.")";
+            $registros = $this->_bd->query($cadenasql);
+            $fila = $registros->fetchAll();
+            clase_conexion::desconectar();
+            return $fila ; 
+
+        }
 
 
+
+
+        public function añadir_plato($idmenu, $cod_cantidad, $nombreplato ,$rutaplato ,$precioplato,$idtipoplato )
+        {
+            clase_conexion::cargar();
+            $this->_bd = clase_conexion::conectar();
+
+            $cadenasql = "CALL añadir_plato(".$idmenu.",".$cod_cantidad.",'".$nombreplato."','".$rutaplato."','".$precioplato."',".$idtipoplato.")";
+            $insertar = $this->_bd->prepare($cadenasql);
+
+            $insertar->execute();
+            clase_conexion::desconectar();
+
+        }
+        public function añadirplato_menunuevo($cod_cantidad, $nombreplato ,$rutaplato ,$precioplato,$idtipoplato )
+        {
+            clase_conexion::cargar();
+            $this->_bd = clase_conexion::conectar();
+
+            $cadenasql = "CALL añadirplato_nuevomenu(".$cod_cantidad.",'".$nombreplato."','".$rutaplato."','".$precioplato."',".$idtipoplato.")";
+            $insertar = $this->_bd->prepare($cadenasql);
+
+            $insertar->execute();
+            clase_conexion::desconectar();
+
+        }
 
         public function Administradores()
         {
