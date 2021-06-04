@@ -13,6 +13,7 @@ if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun perm
   $nolista="";
 } else{
   $nolista="selected";
+  $lista="";
 }
 ?>
 <?php 
@@ -22,6 +23,7 @@ if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun perm
     $nofilita="";
   }else{
     $nofilita="selected";
+    $filita="";
   }
 
 ?>

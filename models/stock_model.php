@@ -141,13 +141,11 @@
         {
             clase_conexion::cargar();
             $this->_bd = clase_conexion::conectar();
-            $cadenasql = "call  proc_restaurantes(".$idrestaurante. ");";
+            $cadenasql = "call  proc_restaurantes(".$idrestaurante.");";
             $registros = $this->_bd->query($cadenasql);
             $fila = $registros->fetchAll();
             clase_conexion::desconectar();
             return $fila ; 
-
-
         }
 
         public function Todosrestaurantes()
@@ -172,6 +170,7 @@
             return $fila ; 
 
         }
+
 
 
 
@@ -225,7 +224,15 @@
 
         }
 
-
+        public function editarRestaurante($p_nombreRestaurante,$p_direccion,$p_Telefono,$p_permiso,$lat,$lng,$p_restaurante_ID,$p_codrestaurante_detalle)
+        {
+            clase_conexion::cargar();
+            $this->_bd = clase_conexion::conectar();
+            $cadenasql = "CALL EditarRestaurante('".$p_nombreRestaurante."','".$p_direccion."',".$p_Telefono.",".$p_permiso.",'".$lat."','".$lng."',".$p_restaurante_ID.",".$p_codrestaurante_detalle.")";
+            $editar = $this->_bd->prepare($cadenasql);
+            $editar->execute();
+            clase_conexion::desconectar();
+        }
 
 
         public function validaringresocod($nrdoc,$pass)
