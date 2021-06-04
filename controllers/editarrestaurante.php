@@ -28,7 +28,18 @@ class editarrestaurante extends Controlador
 	}
 	function editar()
 	{
-		
+		$objmodel = new stock_model();
+		$p_nombreRestaurante =  $_POST["p_nombreRestaurante"] ;
+		$p_direccion = $_POST["p_direccion"];
+		$p_Telefono = $_POST["p_Telefono"];
+		$p_permiso = $_POST["p_permiso"];
+		$p_per_salu = $_POST["per_salu"];
+		$lat = $_POST["lat"]; 
+		$lng = $_POST["lng"];
+		$p_restaurante_ID = ["p_restaurante_ID"];
+		$p_codrestaurante_detalle = ["p_codrestaurante_detalle"];
+
+		$objmodel->editarRestaurante($p_nombreRestaurante,$p_direccion, $p_Telefono, $permisototal,$lat,$lng,$p_restaurante_ID,$p_codrestaurante_detalle);
 	}
 
 
