@@ -144,7 +144,7 @@ if(isset($_GET["v"])||isset($_GET["e"]) ){
 
     
 
-	$redireccion = "http://localhost/Formacion/formacionweb/confirmarcontraseña?v="+$valor;
+	$redireccion = "http://localhost/FORMACIONCOPIA/confirmarcontraseña?v="+$valor;
   
   location.href =	$redireccion ;
   }
