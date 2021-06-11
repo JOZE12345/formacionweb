@@ -67,11 +67,9 @@
           <a class="dropdown-item" href="<?php echo constant('URL') ?>registrar ">Agregar Usuario</a>
           <a class="dropdown-item" href="<?php echo constant('URL') ?>tablarestaurante ">Administrar Restaurantes</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Quinto</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Sexto</a>
       </li>
     </ul>
     
