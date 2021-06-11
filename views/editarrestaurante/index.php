@@ -131,7 +131,13 @@ if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun perm
       ?> type="button" class="btn btn-secondary btn-sm">Ver</button></td>
       <td><?php echo $fila["precioPLato"] ?></td>
       <td><?php echo $fila["nombreTipo"] ?></td>
-      <td><form action="editarrestaurante/eliminarplato"><button type="button" class="btn btn-secondary btn-sm" value="<?php echo $fila["codPlato"] ?>" >Eliminar</button></form></td>
+      <td><form action=<?php  echo constant('URL'). "editarrestaurante/eliminarplato" ?> method="get">
+      <input type="hidden"   name="codMenu" value="<?php echo $fila["codMenu"]?>">
+      <input type="hidden"   name="id" value="<?php echo $_GET["id"]?>">
+      <input type="hidden"   name="codPlato" value="<?php echo $fila["codPlato"] ?>">
+
+      <button type="submit" class="btn btn-secondary btn-sm" >Eliminar</button>
+    </form></td>
     </tr>
   <?php
       }

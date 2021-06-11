@@ -62,11 +62,20 @@ class editarrestaurante extends Controlador
 	}
 	function eliminarplato(){
 
+		$objmodel = new stock_model();
+		$idrestaurante = $_GET["id"];
+		$idplato = $_GET["codPlato"];
+	
+		$idmenu = $_GET["codMenu"];
 
+		$objmodel->EliminarPlato($idplato,$idmenu);
 
+	//	echo $variablesseparadas[0] ; 
+		header("Location:".  constant('URL')."editarrestaurante?id=".$idrestaurante);
 
-		
 	}
+
+	
 
 
 }

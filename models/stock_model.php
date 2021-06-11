@@ -281,11 +281,11 @@
             clase_conexion::desconectar();
         }
 
-        public function EliminarPlato($id)
+        public function EliminarPlato($id,$idmenu)
         {
             clase_conexion::cargar();
             $this->_bd = clase_conexion::conectar();
-            $cadenasql = "call  EliminarPlato(".$id.");";
+            $cadenasql = "call  EliminarPlato(".$id.",".$idmenu.");";
             $registros = $this->_bd->query($cadenasql);
             $fila = $registros->fetchAll();
             clase_conexion::desconectar();
