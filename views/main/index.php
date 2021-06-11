@@ -63,7 +63,7 @@
   <div class="card bg-white text-dark border-0 ">
     <img class="card-img-top imagen" src="public/img/car2.jpg" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title  text-uppercase  font-weight-bold text-center">Ergonomia</h5>
+      <h5 class="card-title  text-uppercase  font-weight-bold text-center">Gatonomia</h5>
       <p class="card-text"  id="fuente4"></p>
     </div>
     
