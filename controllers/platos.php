@@ -28,6 +28,9 @@ class platos extends Controlador
 	}
 function subido(){
 	$objstock = new stock_model();
+
+	
+
 	$idrestaurante_detalle = $_POST["idrestaurantedetalle"];
 	$idmenu = $_POST["idmenu"];
 		$nombreplato = $_POST["nombreplato"];
@@ -37,8 +40,9 @@ function subido(){
 		$precio = $_POST["precio"];
 		$tipoplato = $_POST["tipoplato"];
 
+		if($idrestaurante_detalle!="" && $idmenu!="" && $nombreplato != "" && $cantidad!= "" && $precio!= "" && $tipoplato!= ""){
 
-		echo $idrestaurante_detalle,$idmenu,$nombreplato,$cantidad,$precio,	$tipoplato  ;
+	//	echo $idrestaurante_detalle,$idmenu,$nombreplato,$cantidad,$precio,	$tipoplato  ;
 	if(isset($_FILES['image'])){
 		$errors= array();
 		$file_name = $_FILES['image']['name'];
@@ -60,13 +64,13 @@ function subido(){
 		if(empty($errors)==true){
 		   move_uploaded_file($file_tmp,"C:/xampp/htdocs/Formacion/formacionweb/public/img/".$file_name);
 		   echo "Success";
-		   if($idmenu==""){
+		   if(Trim($idmenu)==""){
 			$objstock->insertarMenu($idrestaurante_detalle);
 			$objstock->añadirplato_menunuevo($cantidad,	$nombreplato,"public/img/".$file_name,$precio,$tipoplato);
 			echo "menu-plato";
 			header("Location:".  constant('URL')."tablarestaurante");
 		  }else{
-	  
+			echo $idmenu ;
 			$objstock->añadir_plato($idmenu,$cantidad,	$nombreplato,"public/img/".$file_name,$precio,$tipoplato);
 			echo "plato";
 			header("Location:".  constant('URL')."tablarestaurante");
@@ -75,6 +79,14 @@ function subido(){
 		}else{
 		   print_r($errors);
 		}
+	 }
+	
+	}else{
+
+
+		header("Location:".  constant('URL')."platos?idmenu=". $idmenu." &idrestaurantedetalle=".$idrestaurante_detalle);
+
+
 	 }
 
 

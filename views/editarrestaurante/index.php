@@ -109,6 +109,7 @@ if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun perm
 <th scope="col">Ver Imagen</th>
 <th scope="col">Precio</th>
 <th scope="col">Tipo</th>
+<th scope="col"></th>
 
     </tr>
   </thead>
@@ -130,7 +131,7 @@ if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun perm
       ?> type="button" class="btn btn-secondary btn-sm">Ver</button></td>
       <td><?php echo $fila["precioPLato"] ?></td>
       <td><?php echo $fila["nombreTipo"] ?></td>
-
+      <td><form action="editarrestaurante/eliminarplato"><button type="button" class="btn btn-secondary btn-sm" value="<?php echo $fila["codPlato"] ?>" >Eliminar</button></form></td>
     </tr>
   <?php
       }

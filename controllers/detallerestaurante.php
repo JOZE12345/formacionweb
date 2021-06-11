@@ -24,6 +24,11 @@ class detallerestaurante extends Controlador
 	function agregar()
 	{
 		$objmodel = new stock_model();
+
+		
+
+
+
 		$p_nombreRestaurante =  $_POST["p_nombreRestaurante"] ;
 		$p_direccion = $_POST["p_direccion"];
 		$p_Telefono = $_POST["p_Telefono"];
@@ -31,7 +36,7 @@ class detallerestaurante extends Controlador
 		$p_per_salu = $_POST["per_salu"];
 		$lat = $_POST["lat"]; 
 		$lng = $_POST["lng"];
-		$pemisototal = 0;
+		$pemisototal = null;
 
 		if($p_permiso==1 || $p_per_salu == 1)
 		{	
@@ -41,13 +46,16 @@ class detallerestaurante extends Controlador
 			$permisototal = 2;
 		}
 		
-		
+		if($p_nombreRestaurante!="" && $p_direccion!="" && $p_Telefono != "" && $permisototal!= "" && $lat!= "" && $lng!= ""){
 
         $objmodel->insertarRestaurante($p_nombreRestaurante,$p_direccion, $p_Telefono, $permisototal,$lat,$lng);
 
         header("Location:".  constant('URL')."tablarestaurante");
 		
-	
+		}else{
+			header("Location:".  constant('URL')."detallerestaurante");
+
+		}
 	}
 
 }

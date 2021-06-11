@@ -49,8 +49,23 @@ class editarrestaurante extends Controlador
 		else{
 			$permisototal = 2;
 		}
+
+		if($p_nombreRestaurante!="" && $p_direccion!="" && $p_Telefono != "" && $permisototal!= "" && $lat!= "" && $lng!= ""&& $p_restaurante_ID!= "" && $p_codrestaurante_detalle!= ""){
+
 		$objmodel->editarRestaurante($p_nombreRestaurante,$p_direccion, $p_Telefono, $permisototal,$lat,$lng,$p_restaurante_ID,$p_codrestaurante_detalle);
 		header("Location:".  constant('URL')."tablarestaurante");
+		}else{
+
+			header("Location:".  constant('URL')."editarrestaurante?id=".$p_restaurante_ID."|".$p_codrestaurante_detalle);
+
+		}
+	}
+	function eliminarplato(){
+
+
+
+
+		
 	}
 
 
