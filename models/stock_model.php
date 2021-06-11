@@ -271,7 +271,7 @@
             clase_conexion::desconectar();
         }
 
-        public function EditarPlato()
+        public function EditarPlato($p_nombrePlato,$p_foto,$p_precioPlato,$p_codTipoPlato,$p_codPlato)
         {
             clase_conexion::cargar();
             $this->_bd = clase_conexion::conectar();
