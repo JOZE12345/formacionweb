@@ -30,7 +30,7 @@ $opciones = "";
             
                   <div class='row'>
                     
-                    <img class='imagen ' src='".$fila["foto"]."'alt='Card image cap'>
+                    <img class='gato ' src='".$fila["foto"]."'alt='Card image cap'>
                     
                     <div class='col-sm'>
                     <p class='p'>TIPO CERTIFICADO:  ".$fila["nombrePermisoSalubridad"]  ." </p>

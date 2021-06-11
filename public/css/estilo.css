@@ -96,7 +96,7 @@ body {
   background-color: #fff;
 }
 
-.platos .imagen{
+.platos .gato{
   width: 2px;
   height: 200px;
   position: relative;
@@ -108,7 +108,7 @@ body {
   float: left;
 }
 
-.text.imagen
+.text.gato
 {
   z-index: 1;
   width: 540px;
@@ -145,7 +145,7 @@ body {
 
 
 
-.imagen
+.gato
 {
   width: 350px;
   height: 250px;
@@ -165,7 +165,7 @@ body {
 
 
 
-.imagen {
+.gato {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-height: 1px;
