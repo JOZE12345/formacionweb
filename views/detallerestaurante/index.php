@@ -6,6 +6,7 @@
 <h1 class="display-4 text-center">Informacion - Restaurantes</h1>
 <br>
 <br>
+<div class="d-flex p-4 justify-content-center">
 <form action="<?php  echo constant('URL') ."detallerestaurante/agregar" ?>" method="POST">
   <div class="form-group">
     <label for="exampleFormControlInput1"><strong>Nombre Restaurante</strong></label>
@@ -51,9 +52,10 @@
     <label for="exampleFormControlTextarea1">Example textarea</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>-->
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary">Ingresar Nuevo Restaurante</button>
 </form>
-
+</div>
+</div>
 
 
 <?php

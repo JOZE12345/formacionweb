@@ -30,6 +30,8 @@ if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun perm
 <h1 class="display-4 text-center">Informacion - Restaurantes</h1>
 <br>
 <br>
+<div class="d-flex p-4 justify-content-center">
+
 <form action="<?php  echo constant('URL') ."editarrestaurante/editar" ?>">
   <div class="form-group">
     <label for="exampleFormControlInput1"><strong>Nombre Restaurante</strong></label>
@@ -79,8 +81,8 @@ if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun perm
   <input type="hidden"   name="idrestaurantedetalle" value="<?php echo $variablesseparadas[1] ?>">
   <button type="submit" class="btn btn-primary">ACTUALIZAR</button>
 </form>
-
-
+</div>
+</div>
 <br>
 <br>
 <br>
@@ -95,10 +97,11 @@ if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun perm
   <input type="hidden" name="idmenu"  value="<?php echo $codMenu["codMenu"]?>">
   <input type="hidden"   name="idrestaurantedetalle" value="<?php echo $variablesseparadas[1] ?>">
 
-  <button class="btn btn-outline-success  bg-info my-2 my-sm-0 text-light" type="submit">AGREGAR PLATO</button>
+  <button class="btn  d-grid btn-outline-success   bg-info my-2 my-sm-0 text-light" type="submit">AGREGAR PLATO</button>
   </form>
 </nav>
-<table class="table table-sm table-dark">
+<div class="d-flex p-4 bg-primary">
+<table class="table table-sm table-dark table-bordered">
   <thead>
     <tr>
     <th scope="col">Plato</th>
@@ -135,7 +138,7 @@ if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun perm
 ?>
   </tbody>
 </table>
-
+</div>
 
 
 

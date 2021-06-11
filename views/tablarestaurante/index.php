@@ -17,8 +17,8 @@
   </form>
 </nav>
 
-
-<table class="table table-sm table-dark">
+<div class="d-flex p-4 bg-primary">
+<table class="table table-sm table-dark table-bordered   ">
   <thead>
     <tr>
     <th scope="col">ID</th>
@@ -51,7 +51,7 @@
 ?>
   </tbody>
 </table>
-
+</div>
 <br>
 <br>
 <br>
@@ -71,7 +71,8 @@
     <button class="btn btn-outline-success  bg-info my-2 my-sm-0 text-light" type="submit">AGREGAR NUEVO ADMINISTRADOR</button>
   </form>
 </nav>
-<table class="table table-sm table-dark">
+<div class="d-flex p-4 bg-primary">
+<table class="table table-sm table-dark table-bordered">
   <thead>
     <tr>
     <th scope="col">ID</th>
@@ -102,6 +103,7 @@
 ?>
   </tbody>
 </table>
+</div>
 <?php
 	require_once("views/footer.php");
 

@@ -25,14 +25,16 @@ $lista2="";
 }
 ?>
 <h1 class="display-4 text-center">Agregar Plato</h1>
+<div class="d-flex p-4 justify-content-center">
+
 <form action="<?php  echo constant('URL') ."platos/subido" ?>" method="POST" enctype="multipart/form-data">
   <div class="form-group">
     <label for="exampleFormControlInput1"><strong>Nombre Plato</strong></label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" name="nombreplato" placeholder="restaurante.." value="<?php echo $recuperarrestaurante["nombreRestaurante"] ?>">
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="nombreplato" placeholder="Lomo saltado.." value="<?php echo $recuperarrestaurante["nombreRestaurante"] ?>">
   </div>
   <div class="form-group ">
     <label for="exampleFormControlInput1" class="font-weight-bold">Cantidad</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" name="cantidad" placeholder="jr..av.."  value="<?php echo $recuperarrestaurante["direccion"] ?>">
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="cantidad" placeholder="1.."  value="<?php echo $recuperarrestaurante["direccion"] ?>">
   </div>
 
 
@@ -43,7 +45,7 @@ $lista2="";
 
   <div class="form-group">
     <label for="exampleFormControlInput1" class="font-weight-bold">Precio Plato</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" name="precio" placeholder="0123456" value="<?php echo $recuperarrestaurante["numero_Telf"] ?>">
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="precio" placeholder="20.00" value="<?php echo $recuperarrestaurante["numero_Telf"] ?>">
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1" class="font-weight-bold">Tipo - Plato</label>
@@ -68,7 +70,7 @@ $lista2="";
   <input type="hidden"   name="idmenu" value="<?php echo $idmenu ?>">
   <button type="submit" class="btn btn-primary">ACTUALIZAR</button>
 </form>
-
+</div>
 
 
 

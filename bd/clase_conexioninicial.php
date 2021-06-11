@@ -97,11 +97,10 @@ class clase_conexioninicial{
         require_once("../modelo/EntidadCode.php");
         require_once("../controllers/code.php");
         $entidadcode = new EntidadCode();
-        if(isset($_COOKIE['empresa'])){
-            if($_COOKIE['empresa']=="senati"){
+        if(isset($_COOKIE['empresasenati'])){
              //  $entidadcode->bd_set("VFZSM04ySklhM2xpU0hkNFVVWjBibEZzY0RkS1JXZHNaVE5XWldGRlRtdEpNa1YzV1VWS1UwMURPVlZPUkVWc1Z6RlNPRXBxUVc5UldEQjVZa1pDY2xOdU1VOVNlazFzVlRCNFRtTXpiMnBQUkZGM1RsUmFlRkZZVmxwWmFXZHNWekk1Y0dKc01XUktibGw0VVZoT1MyTkllRWxRUjJOc1NUSjRWRmRUV2xOU1JUVnBWbTR3YUU1cVJTdFRXRWxzVmxVMWJGTkdNSHBaYXpsclVERlpNRlZwZUVaWFZWRnM=");
              $entidadcode->bd_set("");
-            }
+            
         }         
         $entidadcode->servidor_set("");
             
