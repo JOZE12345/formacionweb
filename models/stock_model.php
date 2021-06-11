@@ -271,6 +271,28 @@
             clase_conexion::desconectar();
         }
 
+        public function EditarPlato()
+        {
+            clase_conexion::cargar();
+            $this->_bd = clase_conexion::conectar();
+            $cadenasql = "CALL EditarPlato('".$p_nombrePlato."','".$p_foto."',".$p_precioPlato.",".$p_codTipoPlato.",".$p_codPlato.")";
+            $editar = $this->_bd->prepare($cadenasql);
+            $editar->execute();
+            clase_conexion::desconectar();
+        }
+
+        public function EliminarPlato($id)
+        {
+            clase_conexion::cargar();
+            $this->_bd = clase_conexion::conectar();
+            $cadenasql = "call  EliminarPlato(".$id.");";
+            $registros = $this->_bd->query($cadenasql);
+            $fila = $registros->fetchAll();
+            clase_conexion::desconectar();
+            return $fila ;
+
+        }
+
 
         public function validaringresocod($nrdoc,$pass)
         {
