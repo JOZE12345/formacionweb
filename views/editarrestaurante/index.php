@@ -100,10 +100,10 @@ if(trim($recuperarrestaurante["nombrePermisoSalubridad"])!="No Tiene ningun perm
   <button class="btn  d-grid btn-outline-success   bg-info my-2 my-sm-0 text-light" type="submit">AGREGAR PLATO</button>
   </form>
 </nav>
-<div class="d-flex p-4 bg-primary">
-<table class="table table-sm table-dark table-bordered">
+<div class="d-flex p-4 ">
+<table class="table table-sm table-striped table-bordered">
   <thead>
-    <tr>
+    <tr class="table-active">
     <th scope="col">Plato</th>
 <th scope="col">Foto</th>
 <th scope="col">Ver Imagen</th>

@@ -17,10 +17,10 @@
   </form>
 </nav>
 
-<div class="d-flex p-4 bg-primary">
-<table class="table table-sm table-dark table-bordered   ">
+<div class="d-flex p-4">
+<table class="table table-sm table-striped table-bordered   ">
   <thead>
-    <tr>
+    <tr class="table-active">
     <th scope="col">ID</th>
 <th scope="col">Restaurante</th>
 <th scope="col">Dirección</th>
@@ -71,10 +71,10 @@
     <button class="btn btn-outline-success  bg-info my-2 my-sm-0 text-light" type="submit">AGREGAR NUEVO ADMINISTRADOR</button>
   </form>
 </nav>
-<div class="d-flex p-4 bg-primary">
-<table class="table table-sm table-dark table-bordered">
+<div class="d-flex p-4 ">
+<table class="table table-sm table-striped table-bordered  table-hover">
   <thead>
-    <tr>
+    <tr class="table-active">
     <th scope="col">ID</th>
 <th scope="col">Nombre</th>
 <th scope="col">Apellido</th>
