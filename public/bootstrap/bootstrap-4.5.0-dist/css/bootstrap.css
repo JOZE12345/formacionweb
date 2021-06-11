@@ -4738,7 +4738,7 @@ input[type="button"].btn-block {
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
   color: #fff;
 }
-/*--------------------**/
+/*
 .card {
   position: relative;
   display: -ms-flexbox;
@@ -4781,7 +4781,7 @@ input[type="button"].btn-block {
   min-height: 1px;
   padding: 1.25rem;
 }
-/*------------------------*/
+*/
 
 .card-title {
   margin-bottom: 0.75rem;
@@ -4840,7 +4840,7 @@ input[type="button"].btn-block {
   margin-right: -0.625rem;
   margin-left: -0.625rem;
 }
-/*----------------*/
+/*
 .card-img-overlay {
   position: absolute;
   top: 0;
@@ -4869,7 +4869,7 @@ input[type="button"].btn-block {
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
-/*-----------------*/
+*/
 
 .card-deck .card {
   margin-bottom: 15px;

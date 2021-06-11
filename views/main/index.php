@@ -51,7 +51,7 @@
 <div class="card-deck ">
   <div class="card  bg-white text-dark border-0  " >
     
-    <img class="card-img-top imagen " src="public/img/car1_1.png" alt="Card image cap"  id="zoomIn">
+    <img class="card-img-top  " src="public/img/car1_1.png" alt="Card image cap"  id="zoomIn">
     
     <div class="card-body ">
       <h5 class="card-title  text-uppercase  font-weight-bold text-center">Calidad</h5>
@@ -61,7 +61,7 @@
    
   </div>
   <div class="card bg-white text-dark border-0 ">
-    <img class="card-img-top imagen" src="public/img/car2.jpg" alt="Card image cap">
+    <img class="card-img-top " src="public/img/car2.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title  text-uppercase  font-weight-bold text-center">Ergonomia</h5>
       <p class="card-text"  id="fuente4"></p>
@@ -69,7 +69,7 @@
     
   </div>
   <div class="card bg-white text-dark border-0 ">
-    <img class="card-img-top imagen" src="public/img/car3.jpg" alt="Card image cap">
+    <img class="card-img-top " src="public/img/car3.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title text-uppercase   font-weight-bold text-center">Confianza</h5>
       <p class="card-text"  id="fuente4">
