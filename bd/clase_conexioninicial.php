@@ -23,8 +23,8 @@ class clase_conexioninicial{
         require_once("modelo/EntidadCode.php");
         require_once("controllers/code.php");
         $entidadcode = new EntidadCode();
-        if(isset($_COOKIE['empresa'])){
-            if($_COOKIE['empresa']=="senati"){
+        if(isset($_COOKIE['empresasenati'])){
+            if($_COOKIE['empresasenati']=="senati"){
                // $entidadcode->bd_set("=");
             $entidadcode->bd_set("");
             }
@@ -35,7 +35,7 @@ class clase_conexioninicial{
         
         $entidadcode->usuario_set($_SESSION['user']);
         $entidadcode->clave_set($_SESSION['pass']);
-        $entidadcode->puerto_set("=="); 
+        $entidadcode->puerto_set(""); 
         
         $objeto = new Code();
         $entidadcode = $objeto->inic($entidadcode,8);
@@ -54,7 +54,7 @@ class clase_conexioninicial{
         require_once("controllers/code.php");
         $entidadcode = new EntidadCode();
         if(isset($_COOKIE['empresa'])){
-            if($_COOKIE['empresa']=="senati"){
+            if($_COOKIE['empresasenati']=="senati"){
               //  $entidadcode->bd_set("=");
             $entidadcode->bd_set("");
             }
@@ -65,14 +65,14 @@ class clase_conexioninicial{
 
         $entidadcode->usuario_set($_SESSION['user']);
         $entidadcode->clave_set($_SESSION['pass']);
-        $entidadcode->puerto_set("=="); 
+        $entidadcode->puerto_set(""); 
         
         $objeto = new Code();
         $entidadcode = $objeto->inic($entidadcode,8);
         self::$_bd = trim($entidadcode->bd_get());
         self::$_servidor=trim($entidadcode->servidor_get());
-        self::$_usuario = trim($objeto->Descodificar("=",8).$entidadcode->usuario_get());
-        self::$_clave=trim($objeto->Descodificar("==",8).$entidadcode->clave_get());
+        self::$_usuario = trim($objeto->Descodificar("",8).$entidadcode->usuario_get());
+        self::$_clave=trim($objeto->Descodificar("",8).$entidadcode->clave_get());
         self::$_puerto = trim($entidadcode->puerto_get());
 
         
@@ -97,7 +97,7 @@ class clase_conexioninicial{
         require_once("../modelo/EntidadCode.php");
         require_once("../controllers/code.php");
         $entidadcode = new EntidadCode();
-        if(isset($_COOKIE['empresasenati'])){
+        if(isset($_COOKIE['empresasenati'])=='senati'){
              //  $entidadcode->bd_set("VFZSM04ySklhM2xpU0hkNFVVWjBibEZzY0RkS1JXZHNaVE5XWldGRlRtdEpNa1YzV1VWS1UwMURPVlZPUkVWc1Z6RlNPRXBxUVc5UldEQjVZa1pDY2xOdU1VOVNlazFzVlRCNFRtTXpiMnBQUkZGM1RsUmFlRkZZVmxwWmFXZHNWekk1Y0dKc01XUktibGw0VVZoT1MyTkllRWxRUjJOc1NUSjRWRmRUV2xOU1JUVnBWbTR3YUU1cVJTdFRXRWxzVmxVMWJGTkdNSHBaYXpsclVERlpNRlZwZUVaWFZWRnM=");
              $entidadcode->bd_set("");
             

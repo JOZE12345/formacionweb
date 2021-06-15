@@ -39,6 +39,7 @@ function subido(){
 
 		$precio = $_POST["precio"];
 		$tipoplato = $_POST["tipoplato"];
+		$MenudelDia = $_POST["tipomenu"];
 
 		if($idrestaurante_detalle!="" && $idmenu!="" && $nombreplato != "" && $cantidad!= "" && $precio!= "" && $tipoplato!= ""){
 
@@ -66,14 +67,18 @@ function subido(){
 		   echo "Success";
 		   if(Trim($idmenu)==""){
 			$objstock->insertarMenu($idrestaurante_detalle);
-			$objstock->añadirplato_menunuevo($cantidad,	$nombreplato,"public/img/".$file_name,$precio,$tipoplato);
+			$objstock->añadirplato_menunuevo($cantidad,	$nombreplato,"public/img/".$file_name,$precio,$tipoplato,$MenudelDia);
 			echo "menu-plato";
-			header("Location:".  constant('URL')."tablarestaurante");
+			$restaurantecompleto = $objstock->RedireccionRestaurante($idrestaurante_detalle);
+			$idrestaurante = $restaurantecompleto[0];
+			header("Location:".  constant('URL')."editarrestaurante?id=".$idrestaurante["restaurante_ID"]."|".$idrestaurante_detalle);
 		  }else{
 			echo $idmenu ;
-			$objstock->añadir_plato($idmenu,$cantidad,	$nombreplato,"public/img/".$file_name,$precio,$tipoplato);
+			$objstock->añadir_plato($idmenu,$cantidad,	$nombreplato,"public/img/".$file_name,$precio,$tipoplato,$MenudelDia);
+			$restaurantecompleto = $objstock->RedireccionRestaurante($idrestaurante_detalle);
+			$idrestaurante = $restaurantecompleto[0];
 			echo "plato";
-			header("Location:".  constant('URL')."tablarestaurante");
+			header("Location:".  constant('URL')."editarrestaurante?id=".$idrestaurante["restaurante_ID"]."|".$idrestaurante_detalle);
 		  }
 	  
 		}else{

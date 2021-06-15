@@ -3,7 +3,35 @@
     
 
 ?>
+<script type="text/javascript">
+function valideKey(evt){
+    
+    // code is the decimal ASCII representation of the pressed key.
+    var code = (evt.which) ? evt.which : evt.keyCode;
+    
+    if(code==8) { // backspace.
+      return true;
+    } else if(code==45) { // backspace.
+      return true;
+    } else if(code>=48 && code<=57) { // is a number.
+      return true;
+    } else{ // other keys.
+      return false;
+    }
+}
+</script> 
+<script>
+function myFunction() {
+ $numero =  document.getElementById('telefono').value ;
+if($numero>=8){
 
+
+  document.getElementById('telefono').value = $numero.substr(0, 8);
+
+}
+//alert($numero.length);
+}
+</script>
 <?php 
 if($recuperarrestaurante["codTipoPlato"]==1)
 {
@@ -34,7 +62,7 @@ $lista2="";
   </div>
   <div class="form-group ">
     <label for="exampleFormControlInput1" class="font-weight-bold">Cantidad</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" name="cantidad" placeholder="1.."  value="<?php echo $recuperarrestaurante["direccion"] ?>">
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="cantidad" placeholder="1.."  onkeypress="return valideKey(event);"  value="<?php echo $recuperarrestaurante["direccion"] ?>">
   </div>
 
 
@@ -45,7 +73,7 @@ $lista2="";
 
   <div class="form-group">
     <label for="exampleFormControlInput1" class="font-weight-bold">Precio Plato</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" name="precio" placeholder="20.00" value="<?php echo $recuperarrestaurante["numero_Telf"] ?>">
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="precio"  onkeypress="return valideKey(event);"  placeholder="20.00" value="<?php echo $recuperarrestaurante["numero_Telf"] ?>">
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1" class="font-weight-bold">Tipo - Plato</label>
@@ -60,6 +88,23 @@ $lista2="";
   </div>
  
  
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1" class="font-weight-bold">Tipo - Menu</label>
+    <select name="tipomenu" class="form-control" id="exampleFormControlSelect1">
+      <option value="1" <?php echo $lista1?>>Entrada
+      </option>
+      <option value="2" <?php echo $lista2?>>Plato
+      </option>
+      <option value="3" <?php echo $lista3?>>Postre
+      </option>
+      <option value="4" <?php echo $lista3?>>Plato a la carta
+      </option>
+    </select>
+  </div>
+
+
+
     
  
   <!--<div class="form-group">
@@ -68,7 +113,7 @@ $lista2="";
   </div>-->
   <input type="hidden" name="idrestaurantedetalle"  value="<?php echo $idrestaurante_detalle?>">
   <input type="hidden"   name="idmenu" value="<?php echo $idmenu ?>">
-  <button type="submit" class="btn btn-primary">ACTUALIZAR</button>
+  <button type="submit" class="btn btn-primary">AGREGAR</button>
 </form>
 </div>
 

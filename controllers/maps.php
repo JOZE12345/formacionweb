@@ -37,6 +37,7 @@ $opciones = "";
                     </div>
                     <div class='col-sm'>
                     <p class='p'>TIPO PLATO:  ". $fila["nombreTipo"] . "</p>
+                    <p class='p'>  <a class='navbar-brand' href='https://api.whatsapp.com/send?phone=51". $fila["numero_Telf"] ."&text=hola!%20quiero%20reservar%20-%20". str_replace(" ","%20",$fila["nombrePlato"])  ."'> <img width='60' height='50'  src='public/img/whatsapp.png'/>  </a></p>
                     </div>
                   </div>
                 </div>

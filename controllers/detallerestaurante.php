@@ -29,7 +29,7 @@ class detallerestaurante extends Controlador
 
 
 
-		$p_nombreRestaurante =  $_POST["p_nombreRestaurante"] ;
+		$p_nombreRestaurante =  $_POST["p_nombreRestaurante"] ;	
 		$p_direccion = $_POST["p_direccion"];
 		$p_Telefono = $_POST["p_Telefono"];
 		$p_permiso = $_POST["p_permiso"];
@@ -50,7 +50,10 @@ class detallerestaurante extends Controlador
 
         $objmodel->insertarRestaurante($p_nombreRestaurante,$p_direccion, $p_Telefono, $permisototal,$lat,$lng);
 
-        header("Location:".  constant('URL')."tablarestaurante");
+	 	$ultimorestaurante = 	$objmodel->UltimoRestauranteAgregado();
+		$idres_detalle =  $ultimorestaurante[0];
+
+        header("Location:".  constant('URL')."editarrestaurante?id=".$idres_detalle["Max(restaurante_ID)"]."|".$idres_detalle["Max(codrestaurante_detalle)"]);
 		
 		}else{
 			header("Location:".  constant('URL')."detallerestaurante");
